@@ -32,8 +32,22 @@ export function LanguageProvider({
   const [lang, setLangState] = useState<Language>(initialLang);
 
   useEffect(() => {
+    // Sync document attribute on client
     document.documentElement.lang = lang;
   }, [lang]);
+
+  useEffect(() => {
+    // Sync with client-side cookie if it differed at hydration
+    if (typeof document !== 'undefined') {
+      const match = document.cookie.match(/(^| )dfi_lang=([^;]+)/);
+      if (match && (match[2] === 'bn' || match[2] === 'en')) {
+        const savedLang = match[2] as Language;
+        if (savedLang !== lang) {
+          setLangState(savedLang);
+        }
+      }
+    }
+  }, []);
 
   const setLang = (newLang: Language) => {
     setLangState(newLang);
