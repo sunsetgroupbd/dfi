@@ -93,50 +93,50 @@ export const HeroSection: React.FC = () => {
         </Container>
       </div>
 
-      {/* 3. Full-width Attached Statutory Fact Strip (Directly connected to hero bottom) */}
-      <div className="relative z-10 bg-[#0A2617]/95 backdrop-blur-md border-t border-[#18422A] py-6 text-white">
+      {/* 3. Full-width Attached Statutory Fact Strip (3 cards in a row on mobile and desktop) */}
+      <div className="relative z-10 bg-[#0A2617]/95 backdrop-blur-md border-t border-[#18422A] py-4 sm:py-6 text-white">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
             {/* Fact 1 */}
-            <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
-              <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <FaFileContract className="w-5 h-5 text-[#86EFAC]" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-1.5 sm:gap-4 p-2 sm:p-3 rounded-xl bg-white/[0.04] border border-white/10">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
+                <FaFileContract className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-normal">
+                <h4 className="text-[11px] sm:text-sm font-bold text-white tracking-normal leading-tight">
                   {lang === 'bn' ? 'সাফ-কবলা মালিকানা' : 'Saf-Kabala Ownership'}
                 </h4>
-                <p className="text-xs text-[#9CA3AF] mt-0.5">
+                <p className="text-[9px] sm:text-xs text-[#9CA3AF] mt-0.5 leading-tight sm:leading-normal line-clamp-2 sm:line-clamp-none">
                   {lang === 'bn' ? 'রেজিস্ট্রেশনকৃত স্থায়ী হস্তান্তরযোগ্য দলিল' : 'Deeded permanent registered title'}
                 </p>
               </div>
             </div>
 
             {/* Fact 2 */}
-            <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
-              <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <FaScaleBalanced className="w-5 h-5 text-[#86EFAC]" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-1.5 sm:gap-4 p-2 sm:p-3 rounded-xl bg-white/[0.04] border border-white/10">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
+                <FaScaleBalanced className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-normal">
+                <h4 className="text-[11px] sm:text-sm font-bold text-white tracking-normal leading-tight">
                   {lang === 'bn' ? 'শরীয়াহ সুপারভাইজরি কমিটি' : 'Shariah Supervisory Committee'}
                 </h4>
-                <p className="text-xs text-[#9CA3AF] mt-0.5">
+                <p className="text-[9px] sm:text-xs text-[#9CA3AF] mt-0.5 leading-tight sm:leading-normal line-clamp-2 sm:line-clamp-none">
                   {lang === 'bn' ? 'হালাল বিনিয়োগ নীতিমালা নিশ্চিতকরণে গঠিত' : 'Supervising halal investment standards'}
                 </p>
               </div>
             </div>
 
             {/* Fact 3 */}
-            <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
-              <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <FaShieldHalved className="w-5 h-5 text-[#86EFAC]" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-1.5 sm:gap-4 p-2 sm:p-3 rounded-xl bg-white/[0.04] border border-white/10">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
+                <FaShieldHalved className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-normal">
+                <h4 className="text-[11px] sm:text-sm font-bold text-white tracking-normal leading-tight">
                   {lang === 'bn' ? 'কোম্পানি আইন ১৯৯৪' : 'Company Act 1994'}
                 </h4>
-                <p className="text-xs text-[#9CA3AF] mt-0.5">
+                <p className="text-[9px] sm:text-xs text-[#9CA3AF] mt-0.5 leading-tight sm:leading-normal line-clamp-2 sm:line-clamp-none">
                   {lang === 'bn' ? 'আইনগত কাঠামোর অধীনে সুদৃঢ় সুরক্ষা' : 'Institutional corporate protection'}
                 </p>
               </div>

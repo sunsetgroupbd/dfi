@@ -48,9 +48,9 @@ export interface OwnershipStep {
 export interface FAQItem {
   id: string;
   question: string;
-  questionBn: string;
+  questionBn?: string;
   answer: string;
-  answerBn: string;
+  answerBn?: string;
   category?: string;
 }
 

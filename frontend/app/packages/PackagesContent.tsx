@@ -56,10 +56,10 @@ export const PackagesContent: React.FC = () => {
         </div>
       </Container>
 
-      {/* Main Packages Display */}
+      {/* Main Packages Display (2 in a row on mobile, 4 on desktop) */}
       <Container className="mb-16">
         {!showComparison ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
             {t.packages.items.map((pkg) => (
               <PackageCard
                 key={pkg.id}

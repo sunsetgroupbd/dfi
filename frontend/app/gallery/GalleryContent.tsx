@@ -29,9 +29,9 @@ export const GalleryContent: React.FC = () => {
         </p>
       </Container>
 
-      {/* Gallery Grid - Only Images */}
+      {/* Gallery Grid - 2 columns on mobile, 3 on desktop */}
       <Container className="mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
           {galleryItems.map((item) => (
             <div
               key={item.id}

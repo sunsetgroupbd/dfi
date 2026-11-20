@@ -114,20 +114,20 @@ export const WhyInvestSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Right Column: 10 App-style Cards (5x2 grid on desktop) (8 cols) */}
-          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3.5">
+          {/* Right Column: 10 App-style Cards (2 per row on mobile, 3 on tablet, 5 on desktop) */}
+          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2.5 sm:gap-3.5">
             {items.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.id}
-                  className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[125px] group"
+                  className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] p-3 sm:p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[105px] sm:min-h-[125px] group"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/40 flex items-center justify-center mb-3 shadow-xs">
-                    <Icon className="w-4 h-4 text-[#1E7C46]" />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/40 flex items-center justify-center mb-2.5 sm:mb-3 shadow-xs shrink-0">
+                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1E7C46]" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-semibold text-[#111827] leading-snug">
+                    <h4 className="text-[11px] sm:text-xs font-semibold text-[#111827] leading-tight sm:leading-snug">
                       {lang === 'bn' ? item.titleBn : item.titleEn}
                     </h4>
                   </div>

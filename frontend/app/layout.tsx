@@ -58,6 +58,13 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: 'https://dfi.com.bd',
+    languages: {
+      'bn-BD': 'https://dfi.com.bd',
+      'en-US': 'https://dfi.com.bd',
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -84,18 +91,19 @@ export const metadata: Metadata = {
       'শহরের প্রাণকেন্দ্রে কোলাহল মুক্ত প্রকৃতির শান্ত পরিবেশে ঢাকা ফ্যান্টাসি আইল্যান্ড। সাফ-কবলা মালিকানা ও শরীয়াহ সুপারভাইজরি কমিটি তত্ত্বাবধানে বিশ্বস্ত বিনিয়োগ।',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://dfi.com.bd/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Dhaka Fantasy Island - Eco Hotel & Resort',
+        alt: 'Dhaka Fantasy Island - Eco Hotel & Resort by Sunset Group',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhaka Fantasy Island (Eco Hotel & Resort)',
+    title: 'Dhaka Fantasy Island (Eco Hotel & Resort) | Sunset Group',
     description:
-      'A peaceful natural environment away from the noise, in the heart of Dhaka. Deeded Saf-Kabala ownership.',
+      'A peaceful natural environment away from the noise, in the heart of Dhaka. Deeded Saf-Kabala land share ownership and halal hospitality investment.',
+    images: ['https://dfi.com.bd/og-image.png'],
   },
   robots: {
     index: true,

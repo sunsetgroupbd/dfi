@@ -66,9 +66,9 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
           </div>
         </div>
 
-        {/* View Mode: Cards or Comparison Table */}
+        {/* View Mode: Cards (2 in a row on mobile, 4 on desktop) or Comparison Table */}
         {!showComparison ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
             {t.packages.items.map((pkg) => (
               <PackageCard
                 key={pkg.id}

@@ -40,7 +40,8 @@ export const JsonLd: React.FC = () => {
         name: 'Dhaka Fantasy Island',
         alternateName: 'DFI',
         url: 'https://dfi.com.bd',
-        logo: 'https://dfi.com.bd/dfi-logo.png',
+        logo: 'https://dfi.com.bd/onlylogo.png',
+        image: 'https://dfi.com.bd/og-image.png',
         contactPoint: {
           '@type': 'ContactPoint',
           telephone: '+8801325074535',
@@ -53,6 +54,16 @@ export const JsonLd: React.FC = () => {
           '@type': 'Organization',
           name: 'Sunset Kuakata Hotel & Resort Limited',
           url: 'https://sunsetgroupbd.com',
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://dfi.com.bd/#website',
+        url: 'https://dfi.com.bd',
+        name: 'Dhaka Fantasy Island',
+        alternateName: ['DFI', 'ঢাকা ফ্যান্টাসি আইল্যান্ড', 'DFI Eco Resort'],
+        publisher: {
+          '@id': 'https://dfi.com.bd/#organization',
         },
       },
     ],

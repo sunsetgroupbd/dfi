@@ -50,34 +50,34 @@ export const LocationSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Commute Time Badges in Modern App-style Cardviews */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
-                <CardShapePattern variant="rings" color="#E5E7EB" className="w-24 h-24 opacity-80" />
-                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
-                  <Clock className="w-5 h-5 text-[#1E7C46]" />
+            {/* Commute Time Badges (2 in a row on mobile and desktop) */}
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 pt-1">
+              <div className="relative overflow-hidden p-3 sm:p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-xl sm:rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-3.5 transition-all duration-200 shadow-xs group">
+                <CardShapePattern variant="rings" color="#E5E7EB" className="w-16 h-16 sm:w-24 sm:h-24 opacity-80" />
+                <div className="relative z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E7C46]" />
                 </div>
                 <div className="relative z-10">
-                  <span className="block text-base font-bold text-[#111827] font-mono leading-none">
-                    20 Min
+                  <span className="block text-sm sm:text-base font-bold text-[#111827] font-mono leading-none">
+                    {lang === 'bn' ? '২০ মিনিট' : '20 Min'}
                   </span>
-                  <span className="text-[11px] text-[#6B7280] block mt-1">
-                    Parliament House
+                  <span className="text-[10px] sm:text-[11px] text-[#6B7280] block mt-1 leading-tight">
+                    {lang === 'bn' ? 'সংসদ ভবন থেকে' : 'From Parliament House'}
                   </span>
                 </div>
               </div>
 
-              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
-                <CardShapePattern variant="circle" color="#E5E7EB" className="w-24 h-24 opacity-80" />
-                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
-                  <Building2 className="w-5 h-5 text-[#1E7C46]" />
+              <div className="relative overflow-hidden p-3 sm:p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-xl sm:rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-2.5 sm:gap-3.5 transition-all duration-200 shadow-xs group">
+                <CardShapePattern variant="circle" color="#E5E7EB" className="w-16 h-16 sm:w-24 sm:h-24 opacity-80" />
+                <div className="relative z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
+                  <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#1E7C46]" />
                 </div>
                 <div className="relative z-10">
-                  <span className="block text-base font-bold text-[#111827] font-mono leading-none">
-                    19 Min
+                  <span className="block text-sm sm:text-base font-bold text-[#111827] font-mono leading-none">
+                    {lang === 'bn' ? '১৯ মিনিট' : '19 Min'}
                   </span>
-                  <span className="text-[11px] text-[#6B7280] block mt-1">
-                    Shaptak Square
+                  <span className="text-[10px] sm:text-[11px] text-[#6B7280] block mt-1 leading-tight">
+                    {lang === 'bn' ? 'শপ্তক স্কয়ার থেকে' : 'From Shaptak Square'}
                   </span>
                 </div>
               </div>

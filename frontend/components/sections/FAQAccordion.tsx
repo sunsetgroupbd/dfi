@@ -22,8 +22,10 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
     <div className="space-y-3 max-w-3xl mx-auto">
       {items.map((item, idx) => {
         const isOpen = openId === item.id;
-        const qText = lang === 'bn' ? item.questionBn : item.question;
-        const aText = lang === 'bn' ? item.answerBn : item.answer;
+        // In localized dictionaries, question/answer holds the active language text,
+        // with questionBn/answerBn as fallback.
+        const qText = lang === 'bn' ? (item.questionBn || item.question) : (item.question || item.questionBn);
+        const aText = lang === 'bn' ? (item.answerBn || item.answer) : (item.answer || item.answerBn);
 
         return (
           <div
