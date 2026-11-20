@@ -1,0 +1,202 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { useLanguage } from '@/lib/language-context';
+import { DFILogo } from '@/components/svg/DFILogo';
+import { Container } from '@/components/ui/Container';
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaYoutube, 
+  FaLinkedinIn, 
+  FaWhatsapp, 
+  FaPhone, 
+  FaEnvelope, 
+  FaLocationDot, 
+  FaClock 
+} from 'react-icons/fa6';
+
+export const Footer: React.FC = () => {
+  const { lang, t } = useLanguage();
+
+  const navLinks = [
+    { href: '/overview', label: t.nav.overview },
+    { href: '/packages', label: t.nav.packages },
+    { href: '/ownership', label: t.nav.ownership },
+    { href: '/why-invest', label: t.nav.whyInvest },
+    { href: '/location', label: t.nav.location },
+    { href: '/gallery', label: t.nav.gallery },
+  ];
+
+  return (
+    <footer className="bg-[#080F0C] text-white border-t border-[#182820] select-text">
+      {/* Upper 4-Column Grid */}
+      <div className="py-14 sm:py-16 border-b border-[#182820]">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+            {/* Column 1: Brand Info & Socials (4.5 cols) */}
+            <div className="lg:col-span-4 space-y-4">
+              <Link href="/" className="inline-block focus-visible:outline-none">
+                <DFILogo variant="inverted" className="h-10 w-auto" />
+              </Link>
+              <p className="text-xs text-[#9CA3AF] leading-relaxed max-w-sm">
+                {lang === 'bn'
+                  ? 'সানসেট গ্রুপের একটি প্রিমিয়াম ইকো-হোটেল এন্ড রিসোর্ট প্রকল্প। সাফ-কবলা মালিকানা। শরীয়াহ অনুসারী। ভবিষ্যতের জন্য নির্মিত।'
+                  : 'A premium eco-hotel & resort project by Sunset Group. Saf-kabala ownership. Shariah compliant. Built for the future.'}
+              </p>
+
+              {/* Social Channels */}
+              <div className="flex items-center gap-2.5 pt-2">
+                <a
+                  href="https://www.facebook.com/share/1LnvD5hqVL/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                >
+                  <FaFacebookF className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://instagram.com/sunsetkuakatahotel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                >
+                  <FaInstagram className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://youtube.com/@sunsetkuakatahotel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                >
+                  <FaYoutube className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://bd.linkedin.com/in/sunsetkuakatahotel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                >
+                  <FaLinkedinIn className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://wa.me/8801325074535"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-colors"
+                >
+                  <FaWhatsapp className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Column 2: Quick Links (2.5 cols) */}
+            <div className="lg:col-span-2 space-y-3">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+                {lang === 'bn' ? 'দ্রুত লিংক' : 'Quick Links'}
+              </h4>
+              <ul className="space-y-2 text-xs">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Legal (2 cols) */}
+            <div className="lg:col-span-2 space-y-3">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+                {lang === 'bn' ? 'আইনি ও নীতিমালা' : 'Legal'}
+              </h4>
+              <ul className="space-y-2 text-xs">
+                <li>
+                  <Link href="/privacy-policy" className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5">
+                    {t.footer.privacyPolicy}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5">
+                    {t.footer.termsOfService}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Office Address & Contact (4 cols) */}
+            <div className="lg:col-span-4 space-y-3">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+                {lang === 'bn' ? 'প্রধান কার্যালয়' : 'Office Address'}
+              </h4>
+              <div className="space-y-2.5 text-xs text-[#9CA3AF] leading-relaxed">
+                <div className="flex items-start gap-2.5">
+                  <FaLocationDot className="w-3.5 h-3.5 text-[#86EFAC] shrink-0 mt-0.5" />
+                  <p>
+                    27 Shaptak Square, Lift-11 (Level-11), Plot-2 (New), Road no-16, Old Dhanmondi 27, Dhanmondi, Dhaka-1209, Bangladesh
+                  </p>
+                </div>
+                <div className="flex items-center gap-2.5 pt-0.5">
+                  <FaPhone className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
+                  <a href="tel:+8801325074535" className="hover:underline text-white font-mono">
+                    +880 1325 074 535
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <FaWhatsapp className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
+                  <a
+                    href="https://wa.me/8801325074535"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-[#38BDF8] font-mono"
+                  >
+                    +880 1325 074 535
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <FaEnvelope className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
+                  <a
+                    href="mailto:sunsetgroupbd@gmail.com"
+                    className="hover:underline text-[#CBD5E1] font-mono"
+                  >
+                    sunsetgroupbd@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5 text-[11px] text-[#9CA3AF] pt-1">
+                  <FaClock className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
+                  <span>
+                    {lang === 'bn'
+                      ? 'অফিস সময়: শনি - বৃহস্পতিবার, সকাল ১০:০০ - সন্ধ্যা ৭:০০ (রবিবার বন্ধ)'
+                      : 'Office Hours: Sat - Thu, 10:00 AM - 7:00 PM (Sunday Closed)'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="py-4 text-xs text-[#6B7280]">
+        <Container>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+            <p>© 2026 Dhaka Fantasy Island (Eco Hotel &amp; Resort). All Rights Reserved.</p>
+            <p className="text-[11px] text-[#9CA3AF]">
+              * Illustrative information. Terms apply. Please read the Deed of Agreement before investing.
+            </p>
+          </div>
+        </Container>
+      </div>
+    </footer>
+  );
+};
