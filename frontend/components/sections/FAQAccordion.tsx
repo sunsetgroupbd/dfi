@@ -28,11 +28,10 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
         return (
           <div
             key={item.id}
-            className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
-              isOpen
-                ? 'bg-white border-[#1E7C46] shadow-md ring-1 ring-[#1E7C46]/20'
-                : 'bg-[#F9FAFB] hover:bg-white border-[#E5E7EB] hover:border-[#1E7C46]/50 shadow-xs'
-            }`}
+            className={`border rounded-2xl transition-all duration-200 overflow-hidden ${isOpen
+              ? 'bg-white border-[#165B33] shadow-md ring-1 ring-[#165B33]/20'
+              : 'bg-[#F9FAFB] hover:bg-white border-[#E5E7EB] hover:border-[#165B33]/50 shadow-xs'
+              }`}
           >
             <button
               onClick={() => toggle(item.id)}
@@ -40,7 +39,7 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
               className="w-full text-left p-4 sm:p-5 flex items-start justify-between gap-4 cursor-pointer focus-visible:outline-none"
             >
               <div className="flex items-start gap-3">
-                <span className="text-xs font-mono font-bold text-[#1E7C46] shrink-0 mt-0.5">
+                <span className="text-xs font-mono font-bold text-[#165B33] shrink-0 mt-0.5">
                   0{idx + 1}
                 </span>
                 <span className="text-sm sm:text-base font-semibold text-[#111827] leading-snug">
@@ -48,9 +47,8 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
                 </span>
               </div>
               <ChevronDown
-                className={`w-4 h-4 text-[#1E7C46] shrink-0 transition-transform duration-180 mt-1 ${
-                  isOpen ? 'rotate-180' : ''
-                }`}
+                className={`w-4 h-4 text-[#165B33] shrink-0 transition-transform duration-180 mt-1 ${isOpen ? 'rotate-180' : ''
+                  }`}
               />
             </button>
 
