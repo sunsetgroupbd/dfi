@@ -14,10 +14,10 @@ export const LocationContent: React.FC = () => {
     <div className="py-12 sm:py-20 bg-white">
       {/* Header Banner */}
       <Container className="mb-14">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#165B33]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#1E7C46]">
           {t.nav.location}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] tracking-tight mt-2 max-w-3xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] tracking-normal mt-2 max-w-3xl leading-tight">
           {t.location.title}
         </h1>
         <p className="text-base sm:text-lg text-[#4B5563] mt-4 max-w-2xl leading-relaxed">
@@ -33,7 +33,7 @@ export const LocationContent: React.FC = () => {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="p-8 bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl shadow-sm space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#165B33]">
+              <span className="text-xs font-semibold uppercase tracking-normal text-[#1E7C46]">
                 {lang === 'bn' ? 'সরাসরি সাইট পরিদর্শন' : 'Guided Site Inspection'}
               </span>
               <h3 className="text-xl font-bold text-[#111827]">
@@ -53,7 +53,7 @@ export const LocationContent: React.FC = () => {
             </div>
 
             <div className="p-8 bg-[#0D2F1D] text-white border border-[#1A452E] rounded-2xl shadow-md space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#86EFAC]">
+              <span className="text-xs font-semibold uppercase tracking-normal text-[#86EFAC]">
                 {lang === 'bn' ? 'প্রধান কার্যালয়' : 'Central Corporate Office'}
               </span>
               <h3 className="text-xl font-bold text-white">

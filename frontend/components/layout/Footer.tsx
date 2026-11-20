@@ -30,30 +30,30 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#080F0C] text-white border-t border-[#182820] select-text">
+    <footer className="bg-[#F9FAFB] text-[#111827] border-t border-[#E5E7EB] select-text">
       {/* Upper 4-Column Grid */}
-      <div className="py-14 sm:py-16 border-b border-[#182820]">
+      <div className="py-14 sm:py-16 border-b border-[#E5E7EB]">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
             {/* Column 1: Brand Info & Socials (4.5 cols) */}
             <div className="lg:col-span-4 space-y-4">
               <Link href="/" className="inline-block focus-visible:outline-none">
-                <DFILogo variant="inverted" className="h-10 w-auto" />
+                <DFILogo variant="full" className="h-16 sm:h-20 w-auto" />
               </Link>
-              <p className="text-xs text-[#9CA3AF] leading-relaxed max-w-sm">
+              <p className="text-xs text-[#4B5563] leading-relaxed max-w-sm">
                 {lang === 'bn'
                   ? 'সানসেট গ্রুপের একটি প্রিমিয়াম ইকো-হোটেল এন্ড রিসোর্ট প্রকল্প। সাফ-কবলা মালিকানা। শরীয়াহ অনুসারী। ভবিষ্যতের জন্য নির্মিত।'
                   : 'A premium eco-hotel & resort project by Sunset Group. Saf-kabala ownership. Shariah compliant. Built for the future.'}
               </p>
 
-              {/* Social Channels */}
+              {/* Social Channels with Authentic Real Icons */}
               <div className="flex items-center gap-2.5 pt-2">
                 <a
                   href="https://www.facebook.com/share/1LnvD5hqVL/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                  className="w-8 h-8 rounded-full bg-white border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:text-white hover:bg-[#1E7C46] hover:border-[#1E7C46] shadow-2xs transition-colors"
                 >
                   <FaFacebookF className="w-3.5 h-3.5" />
                 </a>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                  className="w-8 h-8 rounded-full bg-white border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:text-white hover:bg-[#1E7C46] hover:border-[#1E7C46] shadow-2xs transition-colors"
                 >
                   <FaInstagram className="w-3.5 h-3.5" />
                 </a>
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                  className="w-8 h-8 rounded-full bg-white border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:text-white hover:bg-[#1E7C46] hover:border-[#1E7C46] shadow-2xs transition-colors"
                 >
                   <FaYoutube className="w-3.5 h-3.5" />
                 </a>
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#165B33] hover:border-[#165B33] transition-colors"
+                  className="w-8 h-8 rounded-full bg-white border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:text-white hover:bg-[#1E7C46] hover:border-[#1E7C46] shadow-2xs transition-colors"
                 >
                   <FaLinkedinIn className="w-3.5 h-3.5" />
                 </a>
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="w-8 h-8 rounded-full bg-[#182820] border border-[#23382D] flex items-center justify-center text-[#CBD5E1] hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-colors"
+                  className="w-8 h-8 rounded-full bg-white border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:text-white hover:bg-[#25D366] hover:border-[#25D366] shadow-2xs transition-colors"
                 >
                   <FaWhatsapp className="w-3.5 h-3.5" />
                 </a>
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
 
             {/* Column 2: Quick Links (2.5 cols) */}
             <div className="lg:col-span-2 space-y-3">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827]">
                 {lang === 'bn' ? 'দ্রুত লিংক' : 'Quick Links'}
               </h4>
               <ul className="space-y-2 text-xs">
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5"
+                      className="text-[#4B5563] hover:text-[#1E7C46] transition-colors block py-0.5"
                     >
                       {link.label}
                     </Link>
@@ -117,17 +117,17 @@ export const Footer: React.FC = () => {
 
             {/* Column 3: Legal (2 cols) */}
             <div className="lg:col-span-2 space-y-3">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827]">
                 {lang === 'bn' ? 'আইনি ও নীতিমালা' : 'Legal'}
               </h4>
               <ul className="space-y-2 text-xs">
                 <li>
-                  <Link href="/privacy-policy" className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5">
+                  <Link href="/privacy-policy" className="text-[#4B5563] hover:text-[#1E7C46] transition-colors block py-0.5">
                     {t.footer.privacyPolicy}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-[#9CA3AF] hover:text-white transition-colors block py-0.5">
+                  <Link href="/terms" className="text-[#4B5563] hover:text-[#1E7C46] transition-colors block py-0.5">
                     {t.footer.termsOfService}
                   </Link>
                 </li>
@@ -136,19 +136,19 @@ export const Footer: React.FC = () => {
 
             {/* Column 4: Office Address & Contact (4 cols) */}
             <div className="lg:col-span-4 space-y-3">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+              <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827]">
                 {lang === 'bn' ? 'প্রধান কার্যালয়' : 'Office Address'}
               </h4>
-              <div className="space-y-2.5 text-xs text-[#9CA3AF] leading-relaxed">
+              <div className="space-y-2.5 text-xs text-[#4B5563] leading-relaxed">
                 <div className="flex items-start gap-2.5">
-                  <FaLocationDot className="w-3.5 h-3.5 text-[#86EFAC] shrink-0 mt-0.5" />
+                  <FaLocationDot className="w-3.5 h-3.5 text-[#1E7C46] shrink-0 mt-0.5" />
                   <p>
                     27 Shaptak Square, Lift-11 (Level-11), Plot-2 (New), Road no-16, Old Dhanmondi 27, Dhanmondi, Dhaka-1209, Bangladesh
                   </p>
                 </div>
                 <div className="flex items-center gap-2.5 pt-0.5">
-                  <FaPhone className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
-                  <a href="tel:+8801325074535" className="hover:underline text-white font-mono">
+                  <FaPhone className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
+                  <a href="tel:+8801325074535" className="hover:underline text-[#111827] font-mono">
                     +880 1325 074 535
                   </a>
                 </div>
@@ -158,22 +158,22 @@ export const Footer: React.FC = () => {
                     href="https://wa.me/8801325074535"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-[#38BDF8] font-mono"
+                    className="hover:underline text-[#1E7C46] font-mono"
                   >
                     +880 1325 074 535
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <FaEnvelope className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
+                  <FaEnvelope className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
                   <a
                     href="mailto:sunsetgroupbd@gmail.com"
-                    className="hover:underline text-[#CBD5E1] font-mono"
+                    className="hover:underline text-[#111827] font-mono"
                   >
                     sunsetgroupbd@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-2.5 text-[11px] text-[#9CA3AF] pt-1">
-                  <FaClock className="w-3.5 h-3.5 text-[#86EFAC] shrink-0" />
+                <div className="flex items-center gap-2.5 text-[11px] text-[#6B7280] pt-1">
+                  <FaClock className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
                   <span>
                     {lang === 'bn'
                       ? 'অফিস সময়: শনি - বৃহস্পতিবার, সকাল ১০:০০ - সন্ধ্যা ৭:০০ (রবিবার বন্ধ)'
@@ -187,7 +187,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="py-4 text-xs text-[#6B7280]">
+      <div className="py-5 text-xs text-[#6B7280] bg-[#F3F4F6] border-t border-[#E5E7EB]">
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
             <p>© 2026 Dhaka Fantasy Island (Eco Hotel &amp; Resort). All Rights Reserved.</p>

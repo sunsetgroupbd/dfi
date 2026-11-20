@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { FileText, Compass, ShieldCheck } from 'lucide-react';
+import { FaFileContract, FaScaleBalanced, FaShieldHalved } from 'react-icons/fa6';
 
 export const HeroSection: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -22,9 +22,10 @@ export const HeroSection: React.FC = () => {
           sizes="100vw"
           className="object-cover object-center lg:object-[center_35%]"
         />
-        {/* Cinematic Gradient Scrim: Dark on the left for text contrast, clear on right for resort view */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#071F14] via-[#071F14]/70 to-[#071F14]/40 lg:bg-gradient-to-r lg:from-[#071F14]/95 lg:via-[#071F14]/75 lg:to-[#071F14]/30" />
-        <div className="absolute inset-0 bg-black/25" />
+        {/* A very subtle black fade overlay for crisp photographic contrast */}
+        <div className="absolute inset-0 bg-black/20" />
+        {/* Directional gradient: soft shade behind text on left, crystal clear on right */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071F14]/80 via-[#071F14]/35 to-transparent lg:bg-gradient-to-r lg:from-[#071F14]/70 lg:via-[#071F14]/30 lg:to-transparent" />
       </div>
 
       {/* 2. Hero Content (Text and Buttons Overlayed on Top of Image) */}
@@ -32,17 +33,17 @@ export const HeroSection: React.FC = () => {
         <Container>
           <div className="max-w-2xl lg:max-w-3xl space-y-6">
             {/* Editorial Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.22]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-white tracking-normal leading-[1.22] drop-shadow-sm">
               {lang === 'bn' ? (
                 <>
                   <span className="block text-white">শহরের প্রাণকেন্দ্রে</span>
                   <span className="block text-[#E5E7EB] font-medium text-2xl sm:text-3xl md:text-4xl mt-1">
                     কোলাহল মুক্ত প্রকৃতির শান্ত পরিবেশে
                   </span>
-                  <span className="block text-[#86EFAC] font-extrabold mt-2">
+                  <span className="block text-[#4ADE80] font-bold mt-2">
                     ঢাকা ফ্যান্টাসি আইল্যান্ড
                   </span>
-                  <span className="block text-[#BBF7D0] text-xl sm:text-2xl font-semibold mt-1">
+                  <span className="block text-[#86EFAC] text-xl sm:text-2xl font-semibold mt-1">
                     (ইকো হোটেল এন্ড রিসোর্ট)
                   </span>
                 </>
@@ -52,10 +53,10 @@ export const HeroSection: React.FC = () => {
                   <span className="block text-[#E5E7EB] font-medium text-2xl sm:text-3xl md:text-4xl mt-1">
                     A Peaceful Natural Environment Away from Noise
                   </span>
-                  <span className="block text-[#86EFAC] font-extrabold mt-2">
+                  <span className="block text-[#4ADE80] font-bold mt-2">
                     Dhaka Fantasy Island
                   </span>
-                  <span className="block text-[#BBF7D0] text-xl sm:text-2xl font-semibold mt-1">
+                  <span className="block text-[#86EFAC] text-xl sm:text-2xl font-semibold mt-1">
                     (Eco Hotel &amp; Resort)
                   </span>
                 </>
@@ -63,7 +64,7 @@ export const HeroSection: React.FC = () => {
             </h1>
 
             {/* Sub-text narrative */}
-            <p className="text-sm sm:text-base md:text-lg text-[#E5E7EB]/90 leading-relaxed max-w-xl font-normal">
+            <p className="text-sm sm:text-base md:text-lg text-[#E5E7EB] leading-relaxed max-w-xl font-normal drop-shadow-sm">
               {lang === 'bn'
                 ? 'রাজধানীর মোহাম্মদপুর সংলগ্ন বসিলা পরিকল্পিত এলাকায় নিবিড় প্রকৃতি ও আধুনিক আতিথেয়তার সমন্বয়ে স্থায়ী সাফ-কবলা মালিকানায় অংশীদারিত্বের এক অনন্য সুযোগ।'
                 : 'A serene waterside sanctuary in planned Mohammadpur offering permanent deeded Saf-Kabala land share ownership and halal hospitality investment.'}
@@ -75,7 +76,7 @@ export const HeroSection: React.FC = () => {
                 href="#packages-section"
                 variant="primary"
                 size="lg"
-                className="bg-[#165B33] hover:bg-[#124A2A] text-white border border-[#22C55E]/40 shadow-lg shadow-black/30 rounded-xl px-7 py-3 text-sm font-semibold"
+                className="bg-[#1E7C46] hover:bg-[#176337] text-white border border-[#22C55E]/40 shadow-lg shadow-black/30 rounded-xl px-7 py-3 text-sm font-semibold"
               >
                 {t.hero.ctaPrimary}
               </Button>
@@ -99,10 +100,10 @@ export const HeroSection: React.FC = () => {
             {/* Fact 1 */}
             <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
               <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <FileText className="w-5 h-5 text-[#86EFAC]" />
+                <FaFileContract className="w-5 h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-wide">
+                <h4 className="text-sm font-bold text-white tracking-normal">
                   {lang === 'bn' ? 'সাফ-কবলা মালিকানা' : 'Saf-Kabala Ownership'}
                 </h4>
                 <p className="text-xs text-[#9CA3AF] mt-0.5">
@@ -114,10 +115,10 @@ export const HeroSection: React.FC = () => {
             {/* Fact 2 */}
             <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
               <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <Compass className="w-5 h-5 text-[#86EFAC]" />
+                <FaScaleBalanced className="w-5 h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-wide">
+                <h4 className="text-sm font-bold text-white tracking-normal">
                   {lang === 'bn' ? 'শরীয়াহ সুপারভাইজরি কমিটি' : 'Shariah Supervisory Committee'}
                 </h4>
                 <p className="text-xs text-[#9CA3AF] mt-0.5">
@@ -129,10 +130,10 @@ export const HeroSection: React.FC = () => {
             {/* Fact 3 */}
             <div className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.04] border border-white/10">
               <div className="w-11 h-11 rounded-xl border border-[#2D5A3D] bg-[#071F14] flex items-center justify-center shrink-0 shadow-inner">
-                <ShieldCheck className="w-5 h-5 text-[#86EFAC]" />
+                <FaShieldHalved className="w-5 h-5 text-[#86EFAC]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white tracking-wide">
+                <h4 className="text-sm font-bold text-white tracking-normal">
                   {lang === 'bn' ? 'কোম্পানি আইন ১৯৯৪' : 'Company Act 1994'}
                 </h4>
                 <p className="text-xs text-[#9CA3AF] mt-0.5">

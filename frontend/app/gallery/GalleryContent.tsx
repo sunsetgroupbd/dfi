@@ -18,10 +18,10 @@ export const GalleryContent: React.FC = () => {
     <div className="py-12 sm:py-20 bg-white">
       {/* Header Banner */}
       <Container className="mb-12">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#165B33]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#1E7C46]">
           {t.nav.gallery}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] tracking-tight mt-2 max-w-3xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] tracking-normal mt-2 max-w-3xl leading-tight">
           {t.gallery.title}
         </h1>
         <p className="text-base sm:text-lg text-[#4B5563] mt-3 max-w-2xl leading-relaxed">
@@ -44,7 +44,7 @@ export const GalleryContent: React.FC = () => {
                   setSelectedItem(item);
                 }
               }}
-              className="group relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#0A2617] border border-[#E5E7EB] hover:border-[#165B33] shadow-xs hover:shadow-xl transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#165B33]"
+              className="group relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#0A2617] border border-[#E5E7EB] hover:border-[#1E7C46] shadow-xs hover:shadow-xl transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#1E7C46]"
             >
               {item.imageSrc ? (
                 <Image
@@ -68,7 +68,7 @@ export const GalleryContent: React.FC = () => {
               {/* Subtle hover overlay and zoom icon */}
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors" />
 
-              <div className="absolute bottom-3.5 right-3.5 w-9 h-9 rounded-xl bg-white/95 text-[#165B33] flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-y-0 translate-y-1">
+              <div className="absolute bottom-3.5 right-3.5 w-9 h-9 rounded-xl bg-white/95 text-[#1E7C46] flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-y-0 translate-y-1">
                 <ZoomIn className="w-4 h-4" />
               </div>
             </div>

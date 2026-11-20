@@ -14,10 +14,10 @@ export const OverviewContent: React.FC = () => {
     <div className="py-12 sm:py-20">
       {/* Header Banner */}
       <Container className="mb-14">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2E7D32]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#2E7D32]">
           {t.nav.overview}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-tight mt-2 max-w-3xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-normal mt-2 max-w-3xl leading-tight">
           {lang === 'bn'
             ? 'ঢাকা ফ্যান্টাসি আইল্যান্ড: নগরীর বুকে নিবিড় প্রকৃতির শান্ত আশ্রয়'
             : 'Dhaka Fantasy Island: A Nature-Inspired Eco-Resort Sanctuary'}
@@ -69,7 +69,7 @@ export const OverviewContent: React.FC = () => {
 
             <div className="p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-[4px] space-y-3">
               <h3 className="text-base font-bold text-[#111827] flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#165B33]" />
+                <ShieldCheck className="w-5 h-5 text-[#1E7C46]" />
                 {lang === 'bn' ? 'সাফ-কবলা দলিলের আইনি নিশ্চয়তা' : 'Deeded Saf-Kabala Legal Title'}
               </h3>
               <p className="text-xs sm:text-sm text-[#5A625D]">
@@ -83,7 +83,7 @@ export const OverviewContent: React.FC = () => {
           {/* Right Highlights Column */}
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-[#0D2F1D] text-white p-6 rounded-[4px] border border-[#1A452E] space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#86EFAC]">
+              <span className="text-xs font-semibold uppercase tracking-normal text-[#86EFAC]">
                 {lang === 'bn' ? 'প্রকল্পের সারসংক্ষেপ' : 'Key Specifications'}
               </span>
 

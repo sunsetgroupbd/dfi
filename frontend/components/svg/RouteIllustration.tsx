@@ -48,7 +48,7 @@ export const RouteIllustration: React.FC<SvgProps> = ({
     {/* Road Surface */}
     <path
       d="M650 310C610 260 520 220 460 250C420 270 380 250 330 190C280 130 330 90 370 120C410 150 490 200 535 190"
-      stroke="#165B33"
+      stroke="#1E7C46"
       strokeWidth="3.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -64,8 +64,8 @@ export const RouteIllustration: React.FC<SvgProps> = ({
 
     {/* Landmark 1: Sunset Group Office (Dhanmondi 27 Shaptak Square) */}
     <g transform="translate(650, 310)">
-      <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#165B33" strokeWidth="2.5" />
-      <circle cx="0" cy="0" r="4.5" fill="#165B33" />
+      <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#1E7C46" strokeWidth="2.5" />
+      <circle cx="0" cy="0" r="4.5" fill="#1E7C46" />
       <rect x="16" y="-12" width="125" height="24" rx="3" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="1" />
       <text x="78" y="4" textAnchor="middle" fontSize="10" fontWeight="700" fill="#111827" fontFamily="sans-serif">
         SHAPTAK SQUARE
@@ -105,10 +105,10 @@ export const RouteIllustration: React.FC<SvgProps> = ({
       {/* Outer Pulse Ring */}
       <circle cx="0" cy="0" r="24" fill="#DCFCE7" />
       {/* Pin Body */}
-      <circle cx="0" cy="0" r="14" fill="#165B33" stroke="#FFFFFF" strokeWidth="2.5" />
+      <circle cx="0" cy="0" r="14" fill="#1E7C46" stroke="#FFFFFF" strokeWidth="2.5" />
       <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
       {/* Destination Callout Box */}
-      <rect x="22" y="-18" width="155" height="36" rx="4" fill="#165B33" stroke="#165B33" strokeWidth="1" />
+      <rect x="22" y="-18" width="155" height="36" rx="4" fill="#1E7C46" stroke="#1E7C46" strokeWidth="1" />
       <text x="100" y="-4" textAnchor="middle" fontSize="10" fontWeight="700" fill="#FFFFFF" fontFamily="sans-serif">
         DHAKA FANTASY ISLAND
       </text>

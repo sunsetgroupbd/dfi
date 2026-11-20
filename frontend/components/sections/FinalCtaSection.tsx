@@ -14,29 +14,26 @@ export const FinalCtaSection: React.FC = () => {
   return (
     <section className="py-14 sm:py-20 bg-white">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-[#071F14] text-white p-8 sm:p-12 lg:p-16 shadow-xl border border-[#165B33]/40">
-          {/* Background Resort Image with Overlay */}
+        <div className="relative overflow-hidden rounded-3xl bg-[#071F14] text-white p-8 sm:p-12 lg:p-16 shadow-xl border border-[#1E7C46]/40">
+          {/* Background Resort Image with Overlay (fadedness reduced for vivid clarity) */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/West  View.jpg.webp"
               alt="Dhaka Fantasy Island - Sunset Resort View"
               fill
               sizes="100vw"
-              className="object-cover object-center opacity-30"
+              className="object-cover object-center opacity-65"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#071F14] via-[#071F14]/85 to-[#071F14]/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#071F14]/85 via-[#071F14]/60 to-[#071F14]/35" />
           </div>
 
           {/* SVG Shape Pattern */}
-          <CardShapePattern variant="rings" color="#22C55E" className="w-56 h-56 opacity-20" />
+          <CardShapePattern variant="crest" color="#22C55E" className="w-56 h-56 opacity-20" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Left Text */}
             <div className="space-y-3 text-center lg:text-left max-w-2xl">
-              <span className="inline-block px-3 py-1 bg-white/10 text-[#86EFAC] text-xs font-bold uppercase tracking-wider rounded-full border border-white/15">
-                {lang === 'bn' ? 'স্থায়ী সম্পদের অংশীদারিত্ব' : 'Freehold Land Share'}
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-normal text-white leading-tight">
                 {lang === 'bn'
                   ? 'প্রকৃতির বুকে আপনার স্থায়ী সম্পদের গর্বিত অংশীদার হোন'
                   : 'Ready to Own a Piece of Paradise?'}
@@ -65,7 +62,7 @@ export const FinalCtaSection: React.FC = () => {
                 external
                 variant="primary"
                 size="lg"
-                className="bg-[#165B33] hover:bg-[#124A2A] text-white border-[#22C55E]/40 rounded-2xl px-6 py-3.5 text-xs sm:text-sm shadow-lg font-semibold"
+                className="bg-[#1E7C46] hover:bg-[#176337] text-white border-[#22C55E]/40 rounded-2xl px-6 py-3.5 text-xs sm:text-sm shadow-lg font-semibold"
               >
                 <FaWhatsapp className="w-4 h-4 mr-2 text-[#86EFAC]" />
                 <span>Chat on WhatsApp</span>

@@ -20,7 +20,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
       <table className="w-full text-left border-collapse text-xs sm:text-sm">
         <thead>
           <tr className="bg-[#0D2F1D] text-white">
-            <th className="p-4 font-semibold text-xs uppercase tracking-wider min-w-[170px]">
+            <th className="p-4 font-semibold text-xs uppercase tracking-normal min-w-[170px]">
               {lang === 'bn' ? 'প্যাকেজ বৈশিষ্ট্য' : 'Package Feature'}
             </th>
             {packages.map((pkg) => (
@@ -59,7 +59,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             {packages.map((pkg) => (
               <td
                 key={pkg.id}
-                className="p-4 text-center tabular-nums font-mono text-[#165B33] font-semibold"
+                className="p-4 text-center tabular-nums font-mono text-[#1E7C46] font-semibold"
               >
                 {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
               </td>
@@ -96,7 +96,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'মোট অনুপাত (জমির + নির্মাণ)' : 'Total Formula Area'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center tabular-nums text-[#165B33] font-mono">
+              <td key={pkg.id} className="p-4 text-center tabular-nums text-[#1E7C46] font-mono">
                 {pkg.totalArea} sft
               </td>
             ))}
@@ -148,7 +148,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               <td key={pkg.id} className="p-4 text-center">
                 <button
                   onClick={() => onSelectForInquiry(pkg.id)}
-                  className="px-3.5 py-1.5 text-xs font-semibold bg-[#165B33] text-white rounded-[3px] hover:bg-[#124A2A] transition-colors cursor-pointer"
+                  className="px-3.5 py-1.5 text-xs font-semibold bg-[#1E7C46] text-white rounded-[3px] hover:bg-[#176337] transition-colors cursor-pointer"
                 >
                   {lang === 'bn' ? 'নির্বাচন করুন' : 'Select'}
                 </button>

@@ -10,10 +10,10 @@ export const TermsContent: React.FC = () => {
   return (
     <div className="py-12 sm:py-20">
       <Container size="narrow">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2E7D32]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#2E7D32]">
           {lang === 'bn' ? 'আইনি ও নীতিমালা' : 'Legal & Compliance'}
         </span>
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight mt-2 mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-normal mt-2 mb-8">
           {t.footer.termsOfService}
         </h1>
 

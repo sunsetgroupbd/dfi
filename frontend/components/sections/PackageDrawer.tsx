@@ -48,7 +48,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
             {/* Drawer Header */}
             <div className="p-6 border-b border-[#E5E7EB] bg-[#F9FAFB] flex items-center justify-between">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#165B33]">
+                <span className="text-xs font-semibold uppercase tracking-normal text-[#1E7C46]">
                   {lang === 'bn' ? 'প্যাকেজ বিবরণী' : 'Package Specification'}
                 </span>
                 <h3 className="text-xl font-bold text-[#111827]">
@@ -80,7 +80,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                   <span className="text-xs font-medium uppercase text-[#6B7280]">
                     {t.packages.bookingLabel}
                   </span>
-                  <span className="text-sm font-semibold text-[#165B33] tabular-nums font-mono">
+                  <span className="text-sm font-semibold text-[#1E7C46] tabular-nums font-mono">
                     {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
                   </span>
                 </div>
@@ -88,8 +88,8 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
 
               {/* Area Breakdown: Land + Build = Total */}
               <div className="space-y-3">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-[#111827] flex items-center gap-1.5">
-                  <Building2 className="w-4 h-4 text-[#165B33]" />
+                <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827] flex items-center gap-1.5">
+                  <Building2 className="w-4 h-4 text-[#1E7C46]" />
                   {t.packages.areaBreakdown}
                 </h4>
                 <div className="grid grid-cols-3 gap-2.5 text-center">
@@ -127,8 +127,8 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
 
               {/* Hospitality Privileges */}
               <div className="space-y-2.5">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-[#111827] flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-[#165B33]" />
+                <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827] flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4 text-[#1E7C46]" />
                   {t.packages.stayLabel}
                 </h4>
                 <div className="p-3.5 bg-[#F9FAFB] border border-[#E5E7EB] rounded-[3px] flex items-center justify-between">
@@ -136,7 +136,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                     {lang === 'bn' ? 'বাৎসরিক থাকার দিন' : 'Annual Stay Allowance'}
                   </span>
                   <div className="text-right">
-                    <span className="text-lg font-bold text-[#165B33]">
+                    <span className="text-lg font-bold text-[#1E7C46]">
                       {pkg.accommodationDays} {t.packages.daysUnit}
                     </span>
                     {pkg.accommodationDaysNote && (
@@ -153,13 +153,13 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
 
               {/* Discounts & Perks */}
               <div className="space-y-2.5">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-[#111827] flex items-center gap-1.5">
-                  <Percent className="w-4 h-4 text-[#165B33]" />
+                <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827] flex items-center gap-1.5">
+                  <Percent className="w-4 h-4 text-[#1E7C46]" />
                   {lang === 'bn' ? 'রিসোর্ট সুবিধা ও ছাড়' : 'Resort Privileges & Discounts'}
                 </h4>
                 <ul className="space-y-2 text-xs text-[#374151]">
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#165B33]" />
+                    <Check className="w-4 h-4 text-[#1E7C46]" />
                     <span>
                       {lang === 'bn'
                         ? `রেস্টুরেন্ট বিলের উপর ${pkg.restaurantDiscount}% ছাড়`
@@ -167,7 +167,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#165B33]" />
+                    <Check className="w-4 h-4 text-[#1E7C46]" />
                     <span>
                       {lang === 'bn'
                         ? `অতিরিক্ত রুম বুকিংয়ের উপর ${pkg.extraDaysDiscount}% ছাড়`
@@ -175,7 +175,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#165B33]" />
+                    <Check className="w-4 h-4 text-[#1E7C46]" />
                     <span>
                       {lang === 'bn'
                         ? 'রেজিস্ট্রেশনের পর হস্তান্তর ও বিক্রয়যোগ্য'
@@ -187,8 +187,8 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
 
               {/* Legal Note Box */}
               <div className="p-3.5 bg-[#F0FDF4] border border-[#BBF7D0] text-xs text-[#166534] space-y-1 rounded-[3px]">
-                <div className="flex items-center gap-1.5 font-semibold text-[#165B33]">
-                  <ShieldCheck className="w-4 h-4 text-[#165B33]" />
+                <div className="flex items-center gap-1.5 font-semibold text-[#1E7C46]">
+                  <ShieldCheck className="w-4 h-4 text-[#1E7C46]" />
                   <span>{lang === 'bn' ? 'আইনগত স্বত্ব' : 'Legal Ownership'}</span>
                 </div>
                 <p className="leading-relaxed">
@@ -204,7 +204,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
               <Button
                 variant="primary"
                 size="lg"
-                className="w-full text-center bg-[#165B33] text-white"
+                className="w-full text-center bg-[#1E7C46] text-white"
                 onClick={() => {
                   onSelectForInquiry(pkg.id);
                   onClose();

@@ -17,7 +17,7 @@ export const ProjectIntroSection: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="bg-[#0D2F1D] text-white p-7 sm:p-9 rounded-[4px] border border-[#1A452E] flex flex-col justify-between min-h-[340px]">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#081E13] border border-[#2D5A3D] text-[#86EFAC] text-[11px] font-semibold uppercase tracking-wider rounded-[3px]">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#081E13] border border-[#2D5A3D] text-[#86EFAC] text-[11px] font-semibold uppercase tracking-normal rounded-[3px]">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>{t.projectIntro.badgeText}</span>
                 </div>
@@ -50,11 +50,11 @@ export const ProjectIntroSection: React.FC = () => {
 
           {/* Right Column: Editorial Text (7 cols) */}
           <div className="lg:col-span-7 space-y-4">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6B7280]">
+            <span className="text-[11px] font-semibold uppercase tracking-normal text-[#6B7280]">
               {t.projectIntro.tag}
             </span>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal leading-tight">
               {t.projectIntro.title}
             </h2>
 

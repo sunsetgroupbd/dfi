@@ -3,19 +3,18 @@
 import React from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
-import { CardShapePattern } from '@/components/svg/CardShapePattern';
 import {
-  ShieldCheck,
-  Scale,
-  FileCheck2,
-  PieChart,
-  Users2,
-  TrendingUp,
-  Sparkles,
-  Briefcase,
-  Building,
-  Award,
-} from 'lucide-react';
+  FaShieldHalved,
+  FaScaleBalanced,
+  FaFileInvoiceDollar,
+  FaChartPie,
+  FaPeopleRoof,
+  FaArrowTrendUp,
+  FaCoins,
+  FaBriefcase,
+  FaBuildingColumns,
+  FaAward,
+} from 'react-icons/fa6';
 
 export const WhyInvestSection: React.FC = () => {
   const { lang } = useLanguage();
@@ -23,70 +22,70 @@ export const WhyInvestSection: React.FC = () => {
   const items = [
     {
       id: 1,
-      icon: ShieldCheck,
-      pattern: 'rings',
+      icon: FaShieldHalved,
+      pattern: 'arch',
       titleBn: 'সুদৃঢ় ও নিরাপদ বিনিয়োগ',
       titleEn: 'Stable & Safe Investment',
     },
     {
       id: 2,
-      icon: Scale,
+      icon: FaScaleBalanced,
       pattern: 'circle',
       titleBn: 'বৈধ ও নিয়মিত আয়ের সুযোগ',
       titleEn: 'Legal, Regular Income Opportunity',
     },
     {
       id: 3,
-      icon: FileCheck2,
+      icon: FaFileInvoiceDollar,
       pattern: 'leaf',
       titleBn: 'আইনসম্মত কর সুবিধা',
       titleEn: 'Tax Benefit',
     },
     {
       id: 4,
-      icon: PieChart,
+      icon: FaChartPie,
       pattern: 'grid',
       titleBn: 'সম্পদের সঠিক বহুমুখীকরণ',
       titleEn: 'Asset Diversification',
     },
     {
       id: 5,
-      icon: Users2,
-      pattern: 'rings',
+      icon: FaPeopleRoof,
+      pattern: 'crest',
       titleBn: 'উত্তরাধিকার ও পারিবারিক নিরাপত্তা',
       titleEn: 'Inheritance & Future Security',
     },
     {
       id: 6,
-      icon: TrendingUp,
+      icon: FaArrowTrendUp,
       pattern: 'wave',
       titleBn: 'দ্রুত বর্ধনশীল ইকো-ট্যুরিজম খাত',
       titleEn: 'Fast Growing Sector',
     },
     {
       id: 7,
-      icon: Sparkles,
-      pattern: 'rings',
+      icon: FaCoins,
+      pattern: 'crest',
       titleBn: 'মূল্যবৃদ্ধির চমৎকার সম্ভাবনা',
       titleEn: 'High Return Potential',
     },
     {
       id: 8,
-      icon: Briefcase,
-      pattern: 'circle',
+      icon: FaBriefcase,
+      pattern: 'arch',
       titleBn: 'কর্মসংস্থান সৃষ্টি ও টেকসই উন্নয়ন',
       titleEn: 'Job Creation & Economic Growth',
     },
     {
       id: 9,
-      icon: Building,
+      icon: FaBuildingColumns,
       pattern: 'grid',
       titleBn: 'ব্যাংক বা সাধারণ ফ্ল্যাটের চেয়ে টেকসই বিকল্প',
       titleEn: 'Better Alternative to Idle Savings',
     },
     {
       id: 10,
-      icon: Award,
+      icon: FaAward,
       pattern: 'leaf',
       titleBn: 'সামাজিক মর্যাদা ও স্থায়ী সম্পদ',
       titleEn: 'Social Status & Wealth Building',
@@ -99,15 +98,15 @@ export const WhyInvestSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-4">
           {/* Left Column: Heading (4 cols) */}
           <div className="lg:col-span-4 space-y-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#165B33]">
+            <span className="text-[11px] font-bold uppercase tracking-normal text-[#1E7C46]">
               {lang === 'bn' ? 'বিনিয়োগের গুরুত্ব' : 'WHY INVEST IN DFI?'}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal leading-tight">
               {lang === 'bn'
                 ? 'প্রকৃতিতে প্রোথিত এক সম্ভাবনাময় ভবিষ্যৎ'
                 : 'A promising future, rooted in nature'}
             </h2>
-            <div className="w-12 h-1 bg-[#165B33] rounded-full mt-2"></div>
+            <div className="w-12 h-1 bg-[#1E7C46] rounded-full mt-2"></div>
             <p className="text-xs sm:text-sm text-[#4B5563] pt-3 leading-relaxed">
               {lang === 'bn'
                 ? 'সাফ-কবলা জমি, শরীয়াহ তদারকি ও প্রাতিষ্ঠানিক নিরাপত্তার সুদৃঢ় মেলবন্ধন।'
@@ -122,17 +121,12 @@ export const WhyInvestSection: React.FC = () => {
               return (
                 <div
                   key={item.id}
-                  className="relative overflow-hidden bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[125px] group"
+                  className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[125px] group"
                 >
-                  <CardShapePattern
-                    variant={item.pattern as 'rings' | 'circle' | 'leaf' | 'grid' | 'wave'}
-                    color="#E5E7EB"
-                    className="w-24 h-24 opacity-80 group-hover:opacity-100 transition-opacity"
-                  />
-                  <div className="relative z-10 w-8 h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#165B33]/40 flex items-center justify-center mb-3 shadow-xs">
-                    <Icon className="w-4 h-4 text-[#165B33]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/40 flex items-center justify-center mb-3 shadow-xs">
+                    <Icon className="w-4 h-4 text-[#1E7C46]" />
                   </div>
-                  <div className="relative z-10">
+                  <div>
                     <h4 className="text-xs font-semibold text-[#111827] leading-snug">
                       {lang === 'bn' ? item.titleBn : item.titleEn}
                     </h4>

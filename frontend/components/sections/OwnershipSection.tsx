@@ -12,15 +12,15 @@ export const OwnershipSection: React.FC = () => {
   return (
     <section className="py-16 sm:py-24 bg-[#0A2617] text-white border-b border-[#18422A] relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#165B33]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#1E7C46]/20 rounded-full blur-3xl pointer-events-none" />
 
       <Container className="relative z-10">
         {/* Section Heading */}
         <div className="mb-12 sm:mb-14">
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86EFAC]">
+          <span className="text-[11px] font-bold uppercase tracking-normal text-[#86EFAC]">
             {lang === 'bn' ? 'মালিকানা প্রক্রিয়া' : 'OWNERSHIP PROCESS'}
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight mt-1">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-normal mt-1">
             {lang === 'bn'
               ? 'সহজ। নিরাপদ। শরীয়াহ সম্মত।'
               : 'Simple. Secure. Shariah Compliant.'}
@@ -38,12 +38,12 @@ export const OwnershipSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Step 1 */}
               <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-6 rounded-2xl transition-all duration-200 group">
-                <CardShapePattern variant="rings" color="#86EFAC" className="w-24 h-24 opacity-20" />
+                <CardShapePattern variant="arch" color="#86EFAC" className="w-24 h-24 opacity-20" />
                 <div className="relative z-10 flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white text-[#0A2617] font-extrabold font-mono text-sm flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-white text-[#0A2617] font-bold font-mono text-sm flex items-center justify-center shadow-md">
                     1
                   </div>
-                  <span className="text-[10px] uppercase font-bold text-[#86EFAC] tracking-wider">
+                  <span className="text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
                     {lang === 'bn' ? 'প্রাথমিক বুকিং' : 'Step 1'}
                   </span>
                 </div>
@@ -61,12 +61,12 @@ export const OwnershipSection: React.FC = () => {
 
               {/* Step 2 */}
               <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-6 rounded-2xl transition-all duration-200 group">
-                <CardShapePattern variant="circle" color="#86EFAC" className="w-24 h-24 opacity-20" />
+                <CardShapePattern variant="wave" color="#86EFAC" className="w-24 h-24 opacity-20" />
                 <div className="relative z-10 flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white text-[#0A2617] font-extrabold font-mono text-sm flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-white text-[#0A2617] font-bold font-mono text-sm flex items-center justify-center shadow-md">
                     2
                   </div>
-                  <span className="text-[10px] uppercase font-bold text-[#86EFAC] tracking-wider">
+                  <span className="text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
                     {lang === 'bn' ? 'আইনি চুক্তি' : 'Step 2'}
                   </span>
                 </div>
@@ -83,13 +83,13 @@ export const OwnershipSection: React.FC = () => {
               </div>
 
               {/* Step 3 */}
-              <div className="relative overflow-hidden bg-[#165B33]/40 hover:bg-[#165B33]/50 border border-[#22C55E]/40 p-6 rounded-2xl transition-all duration-200 group shadow-lg">
-                <CardShapePattern variant="rings" color="#22C55E" className="w-24 h-24 opacity-30" />
+              <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-6 rounded-2xl transition-all duration-200 group">
+                <CardShapePattern variant="crest" color="#86EFAC" className="w-24 h-24 opacity-20" />
                 <div className="relative z-10 flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#22C55E] text-[#0A2617] font-extrabold font-mono text-sm flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-white text-[#0A2617] font-bold font-mono text-sm flex items-center justify-center shadow-md">
                     3
                   </div>
-                  <span className="text-[10px] uppercase font-extrabold text-[#BBF7D0] tracking-wider">
+                  <span className="text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
                     {lang === 'bn' ? 'স্থায়ী রেজিস্ট্রি' : 'Final Step'}
                   </span>
                 </div>
@@ -116,7 +116,7 @@ export const OwnershipSection: React.FC = () => {
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                   <FileText className="w-4 h-4 shrink-0" />
                 </div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+                <h4 className="text-xs font-bold uppercase tracking-normal text-white">
                   {lang === 'bn' ? 'হস্তান্তর ও বিক্রয় নীতিমালা (Exit Policy)' : 'Exit Policy'}
                 </h4>
               </div>
@@ -134,7 +134,7 @@ export const OwnershipSection: React.FC = () => {
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                   <Laptop className="w-4 h-4 shrink-0" />
                 </div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+                <h4 className="text-xs font-bold uppercase tracking-normal text-white">
                   {lang === 'bn' ? 'ইআরপি সফটওয়্যার পর্যবেক্ষণ' : 'ERP Updates'}
                 </h4>
               </div>

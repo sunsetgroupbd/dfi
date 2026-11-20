@@ -13,14 +13,14 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const baseClasses =
-    'inline-flex items-center px-2.5 py-1 text-xs font-medium tracking-[0.04em] uppercase rounded-[2px] border';
+    'inline-flex items-center px-2.5 py-1 text-xs font-medium tracking-normal uppercase rounded-[2px] border';
 
   const variantClasses = {
     forest: 'bg-[#0D2F1D] text-white border-[#0D2F1D]',
     sand: 'bg-[#F3F4F6] text-[#111827] border-[#E5E7EB]',
     gold: 'bg-[#D97706] text-white border-[#D97706] font-semibold',
-    outline: 'bg-transparent text-[#165B33] border-[#165B33]',
-    blue: 'bg-[#165B33] text-white border-[#165B33]',
+    outline: 'bg-transparent text-[#1E7C46] border-[#1E7C46]',
+    blue: 'bg-[#1E7C46] text-white border-[#1E7C46]',
   };
 
   return (

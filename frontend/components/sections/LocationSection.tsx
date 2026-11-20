@@ -17,34 +17,34 @@ export const LocationSection: React.FC = () => {
           {/* Left Column: Heading, Address & Commute Pills (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#165B33]">
+              <span className="text-[11px] font-bold uppercase tracking-normal text-[#1E7C46]">
                 {lang === 'bn' ? 'কৌশলগত অবস্থান' : 'PRIME LOCATION'}
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal mt-1.5">
                 {lang === 'bn'
                   ? 'শান্ত প্রকৃতির সান্নিধ্যে, যোগাযোগের কেন্দ্রবিন্দুতে'
                   : 'Peaceful Yet Perfectly Connected'}
               </h2>
-              <div className="w-12 h-1 bg-[#165B33] rounded-full mt-2"></div>
+              <div className="w-12 h-1 bg-[#1E7C46] rounded-full mt-2"></div>
             </div>
 
             {/* Checklist */}
             <div className="space-y-3 text-xs sm:text-sm text-[#374151]">
               <div className="flex items-start gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-[#F0FDF4] border border-[#86EFAC] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 text-[#165B33]" />
+                  <Check className="w-3.5 h-3.5 text-[#1E7C46]" />
                 </div>
                 <span>Mohammadpur Planned Area, Dhaka</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-[#F0FDF4] border border-[#86EFAC] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 text-[#165B33]" />
+                  <Check className="w-3.5 h-3.5 text-[#1E7C46]" />
                 </div>
                 <span>Off Basila Garden City Avenue Road (40 ft Avenue)</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-[#F0FDF4] border border-[#86EFAC] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 text-[#165B33]" />
+                  <Check className="w-3.5 h-3.5 text-[#1E7C46]" />
                 </div>
                 <span>Near Bosila CNG Stand &amp; Bosila Bridge</span>
               </div>
@@ -52,13 +52,13 @@ export const LocationSection: React.FC = () => {
 
             {/* Commute Time Badges in Modern App-style Cardviews */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
+              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
                 <CardShapePattern variant="rings" color="#E5E7EB" className="w-24 h-24 opacity-80" />
-                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs">
-                  <Clock className="w-5 h-5 text-[#165B33]" />
+                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
+                  <Clock className="w-5 h-5 text-[#1E7C46]" />
                 </div>
                 <div className="relative z-10">
-                  <span className="block text-base font-extrabold text-[#111827] font-mono leading-none">
+                  <span className="block text-base font-bold text-[#111827] font-mono leading-none">
                     20 Min
                   </span>
                   <span className="text-[11px] text-[#6B7280] block mt-1">
@@ -67,13 +67,13 @@ export const LocationSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
+              <div className="relative overflow-hidden p-4 bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl flex items-center gap-3.5 transition-all duration-200 shadow-xs group">
                 <CardShapePattern variant="circle" color="#E5E7EB" className="w-24 h-24 opacity-80" />
-                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs">
-                  <Building2 className="w-5 h-5 text-[#165B33]" />
+                <div className="relative z-10 w-10 h-10 rounded-xl bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs">
+                  <Building2 className="w-5 h-5 text-[#1E7C46]" />
                 </div>
                 <div className="relative z-10">
-                  <span className="block text-base font-extrabold text-[#111827] font-mono leading-none">
+                  <span className="block text-base font-bold text-[#111827] font-mono leading-none">
                     19 Min
                   </span>
                   <span className="text-[11px] text-[#6B7280] block mt-1">

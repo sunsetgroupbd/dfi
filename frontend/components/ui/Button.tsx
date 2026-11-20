@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    'inline-flex items-center justify-center font-medium transition-all duration-150 rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer tracking-[0.01em] select-none';
+    'inline-flex items-center justify-center font-medium transition-all duration-150 rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer tracking-normal select-none';
 
   const sizeClasses = {
     sm: 'text-xs px-3.5 py-1.5 min-h-[36px] gap-1.5',
@@ -31,17 +31,17 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      'bg-[#165B33] text-white border-[#165B33] hover:bg-[#124A2A] hover:border-[#124A2A] focus-visible:ring-[#165B33]',
+      'bg-[#1E7C46] text-white border-[#1E7C46] hover:bg-[#176337] hover:border-[#176337] focus-visible:ring-[#1E7C46]',
     secondary:
-      'bg-white text-[#111827] border-[#D1D5DB] hover:bg-[#F9FAFB] hover:border-[#9CA3AF] focus-visible:ring-[#165B33]',
+      'bg-white text-[#111827] border-[#D1D5DB] hover:bg-[#F9FAFB] hover:border-[#9CA3AF] focus-visible:ring-[#1E7C46]',
     outline:
-      'bg-transparent text-[#165B33] border-[#165B33] hover:bg-[#165B33] hover:text-white focus-visible:ring-[#165B33]',
+      'bg-transparent text-[#1E7C46] border-[#1E7C46] hover:bg-[#1E7C46] hover:text-white focus-visible:ring-[#1E7C46]',
     gold:
       'bg-[#D97706] text-white border-[#D97706] hover:bg-[#B45309] hover:border-[#B45309] font-semibold focus-visible:ring-[#D97706]',
     dark:
-      'bg-[#0D2F1D] text-white border-[#0D2F1D] hover:bg-[#165B33] hover:border-[#165B33] focus-visible:ring-[#0D2F1D]',
+      'bg-[#0D2F1D] text-white border-[#0D2F1D] hover:bg-[#1E7C46] hover:border-[#1E7C46] focus-visible:ring-[#0D2F1D]',
     ghost:
-      'bg-transparent text-[#111827] border-transparent hover:bg-[#F3F4F6] focus-visible:ring-[#165B33]',
+      'bg-transparent text-[#111827] border-transparent hover:bg-[#F3F4F6] focus-visible:ring-[#1E7C46]',
   };
 
   const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;

@@ -65,9 +65,9 @@ export const Header: React.FC = () => {
           <Link
             href="/"
             aria-label="Dhaka Fantasy Island - Home"
-            className="flex items-center shrink-0 focus-visible:outline-none"
+            className="flex items-center shrink-0 focus-visible:outline-none group"
           >
-            <DFILogo className="h-10 sm:h-11 w-auto" />
+            <DFILogo variant="header" className="group-hover:opacity-90 transition-opacity" />
           </Link>
 
           {/* Desktop Navigation in Center */}
@@ -83,8 +83,8 @@ export const Header: React.FC = () => {
                   href={link.href}
                   className={`text-[13.5px] px-3.5 py-2 rounded-xl transition-colors whitespace-nowrap font-medium ${
                     active
-                      ? 'text-[#165B33] font-semibold bg-[#F3F4F6]'
-                      : 'text-[#4B5563] hover:text-[#165B33] hover:bg-[#F9FAFB]'
+                      ? 'text-[#1E7C46] font-semibold bg-[#F3F4F6]'
+                      : 'text-[#4B5563] hover:text-[#1E7C46] hover:bg-[#F9FAFB]'
                   }`}
                 >
                   {link.label}
@@ -105,12 +105,12 @@ export const Header: React.FC = () => {
               }
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-xl border border-[#E5E7EB] bg-white text-[#111827] hover:bg-[#F9FAFB] transition-colors cursor-pointer select-none shadow-xs"
             >
-              <Globe className="w-3.5 h-3.5 text-[#165B33]" />
-              <span className={lang === 'bn' ? 'font-bold text-[#165B33]' : 'text-[#6B7280]'}>
+              <Globe className="w-3.5 h-3.5 text-[#1E7C46]" />
+              <span className={lang === 'bn' ? 'font-bold text-[#1E7C46]' : 'text-[#6B7280]'}>
                 বাংলা
               </span>
               <span className="text-[#D1D5DB]">/</span>
-              <span className={lang === 'en' ? 'font-bold text-[#165B33]' : 'text-[#6B7280]'}>
+              <span className={lang === 'en' ? 'font-bold text-[#1E7C46]' : 'text-[#6B7280]'}>
                 EN
               </span>
             </button>
@@ -191,7 +191,7 @@ export const Header: React.FC = () => {
                   href="/contact"
                   variant="primary"
                   size="lg"
-                  className="w-full text-center bg-[#165B33] text-white border-[#165B33]"
+                  className="w-full text-center bg-[#1E7C46] text-white border-[#1E7C46]"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.common.enquireNow}

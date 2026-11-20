@@ -14,20 +14,20 @@ export const ParentGroupSection: React.FC = () => {
     <section className="py-16 sm:py-20 bg-white border-b border-[#E5E7EB]">
       <Container>
         <div className="relative overflow-hidden bg-[#F9FAFB] border border-[#E5E7EB] p-7 sm:p-10 rounded-2xl shadow-sm">
-          <CardShapePattern variant="rings" color="#165B33" className="w-48 h-48 opacity-30" />
+          <CardShapePattern variant="rings" color="#1E7C46" className="w-48 h-48 opacity-30" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column: Parent Info (8 cols) */}
             <div className="lg:col-span-8 space-y-3.5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#E5E7EB] text-[#165B33] text-xs font-semibold uppercase tracking-wider rounded-xl shadow-xs">
-                <Building2 className="w-3.5 h-3.5 text-[#165B33]" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#E5E7EB] text-[#1E7C46] text-xs font-semibold uppercase tracking-normal rounded-xl shadow-xs">
+                <Building2 className="w-3.5 h-3.5 text-[#1E7C46]" />
                 <span>{t.parentGroup.tag}</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal">
                 {t.parentGroup.title}
               </h2>
 
-              <p className="text-xs font-semibold text-[#165B33] uppercase tracking-wider">
+              <p className="text-xs font-semibold text-[#1E7C46] uppercase tracking-normal">
                 {t.parentGroup.subtitle}
               </p>
 
@@ -48,7 +48,7 @@ export const ParentGroupSection: React.FC = () => {
             <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between space-y-4">
               <div className="p-5 bg-white border border-[#E5E7EB] rounded-2xl w-full text-left shadow-xs">
                 <div className="flex items-center gap-2 text-[#111827] font-semibold text-xs mb-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#165B33]" />
+                  <ShieldCheck className="w-4 h-4 text-[#1E7C46]" />
                   <span>{lang === 'bn' ? 'আইনগত কাঠামোর ভিত্তি' : 'Statutory Registry'}</span>
                 </div>
                 <p className="text-xs text-[#4B5563] leading-relaxed">

@@ -9,8 +9,8 @@
   --color-forest: #0D2F1D;
   --color-forest-dark: #081E13;
   --color-forest-surface: #0F3A24;
-  --color-primary-green: #165B33;
-  --color-primary-green-hover: #124A2A;
+  --color-primary-green: #1E7C46;
+  --color-primary-green-hover: #176337;
   --color-secondary-green: #2E7D32;
   --color-accent-green: #1F6B3B;
   
@@ -35,12 +35,14 @@
 @layer base {
   *, ::before, ::after {
     border-color: #E5E7EB;
+    letter-spacing: normal !important;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: normal !important;
   }
 
   body {
@@ -49,11 +51,15 @@
     font-family: var(--font-poppins);
     margin: 0;
     padding: 0;
+    letter-spacing: normal !important;
+    font-weight: 400;
   }
 
-  /* Bengali typography overrides */
-  [lang="bn"] {
-    font-family: var(--font-hind);
+  /* Bengali typography: Hind Siliguri across the entire Bengali interface with elegant, restrained weights */
+  [lang="bn"],
+  [lang="bn"] * {
+    font-family: var(--font-hind), sans-serif;
+    letter-spacing: normal !important;
   }
 
   [lang="bn"] h1,
@@ -62,12 +68,24 @@
   [lang="bn"] h4,
   [lang="bn"] h5,
   [lang="bn"] h6 {
-    font-family: var(--font-noto-bengali);
+    font-family: var(--font-hind), sans-serif;
+    letter-spacing: normal !important;
+    font-weight: 600;
+  }
+
+  /* Headings: restrained weights (avoiding excessively heavy bold) and zero letter gap */
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: normal !important;
+    font-weight: 600;
+  }
+
+  p, span, a, button, label, input, select, textarea {
+    letter-spacing: normal !important;
   }
 
   /* Focus visible accessibility styling */
   :focus-visible {
-    outline: 2px solid #165B33;
+    outline: 2px solid #1E7C46;
     outline-offset: 2px;
   }
 }
@@ -93,5 +111,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #165B33;
+  background: #1E7C46;
 }

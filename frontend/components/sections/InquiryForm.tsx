@@ -87,9 +87,9 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
 
   if (status === 'success') {
     return (
-      <div className={`p-8 bg-white border border-[#165B33] rounded-2xl shadow-sm text-center space-y-4 ${className}`}>
-        <div className="w-12 h-12 mx-auto bg-[#F0FDF4] text-[#165B33] flex items-center justify-center rounded-full border border-[#86EFAC]">
-          <CheckCircle2 className="w-7 h-7 text-[#165B33]" />
+      <div className={`p-8 bg-white border border-[#1E7C46] rounded-2xl shadow-sm text-center space-y-4 ${className}`}>
+        <div className="w-12 h-12 mx-auto bg-[#F0FDF4] text-[#1E7C46] flex items-center justify-center rounded-full border border-[#86EFAC]">
+          <CheckCircle2 className="w-7 h-7 text-[#1E7C46]" />
         </div>
         <h3 className="text-xl font-bold text-[#111827]">
           {t.contact.successTitle}
@@ -139,7 +139,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
 
       {/* Full Name */}
       <div className="space-y-1.5">
-        <label htmlFor="fullName" className="block text-xs font-semibold uppercase tracking-wider text-[#374151]">
+        <label htmlFor="fullName" className="block text-xs font-semibold uppercase tracking-normal text-[#374151]">
           {t.contact.fullNameLabel} <span className="text-[#D97706]">*</span>
         </label>
         <input
@@ -148,7 +148,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
           autoComplete="name"
           placeholder={t.contact.fullNamePlaceholder}
           {...register('fullName')}
-          className={`w-full px-4 py-2.5 text-sm bg-white border rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#165B33]/20 focus:border-[#165B33] transition-colors ${
+          className={`w-full px-4 py-2.5 text-sm bg-white border rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1E7C46]/20 focus:border-[#1E7C46] transition-colors ${
             errors.fullName ? 'border-red-500' : 'border-[#D1D5DB]'
           }`}
         />
@@ -159,7 +159,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
 
       {/* Phone Number */}
       <div className="space-y-1.5">
-        <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-[#374151]">
+        <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-normal text-[#374151]">
           {t.contact.phoneFieldLabel} <span className="text-[#D97706]">*</span>
         </label>
         <input
@@ -168,7 +168,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
           autoComplete="tel"
           placeholder={t.contact.phoneFieldPlaceholder}
           {...register('phone')}
-          className={`w-full px-4 py-2.5 text-sm font-mono bg-white border rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#165B33]/20 focus:border-[#165B33] transition-colors ${
+          className={`w-full px-4 py-2.5 text-sm font-mono bg-white border rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1E7C46]/20 focus:border-[#1E7C46] transition-colors ${
             errors.phone ? 'border-red-500' : 'border-[#D1D5DB]'
           }`}
         />
@@ -180,7 +180,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
       {/* Email */}
       {!compact && (
         <div className="space-y-1.5">
-          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-[#374151]">
+          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-normal text-[#374151]">
             {t.contact.emailFieldLabel}
           </label>
           <input
@@ -189,20 +189,20 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
             autoComplete="email"
             placeholder={t.contact.emailFieldPlaceholder}
             {...register('email')}
-            className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#165B33]/20 focus:border-[#165B33] transition-colors"
+            className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1E7C46]/20 focus:border-[#1E7C46] transition-colors"
           />
         </div>
       )}
 
       {/* Package Selection */}
       <div className="space-y-1.5">
-        <label htmlFor="packageId" className="block text-xs font-semibold uppercase tracking-wider text-[#374151]">
+        <label htmlFor="packageId" className="block text-xs font-semibold uppercase tracking-normal text-[#374151]">
           {t.contact.packageSelectLabel}
         </label>
         <select
           id="packageId"
           {...register('packageId')}
-          className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#165B33]/20 focus:border-[#165B33] transition-colors"
+          className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1E7C46]/20 focus:border-[#1E7C46] transition-colors"
         >
           <option value="">{t.contact.packageSelectDefault}</option>
           {t.packages.items.map((pkg) => (
@@ -216,7 +216,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
       {/* Message */}
       {!compact && (
         <div className="space-y-1.5">
-          <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-[#374151]">
+          <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-normal text-[#374151]">
             {t.contact.messageFieldLabel}
           </label>
           <textarea
@@ -224,7 +224,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
             rows={3}
             placeholder={t.contact.messageFieldPlaceholder}
             {...register('message')}
-            className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#165B33]/20 focus:border-[#165B33] resize-none transition-colors"
+            className="w-full px-4 py-2.5 text-sm bg-white border border-[#D1D5DB] rounded-xl text-[#111827] focus:outline-none focus:ring-2 focus:ring-[#1E7C46]/20 focus:border-[#1E7C46] resize-none transition-colors"
           />
         </div>
       )}
@@ -235,7 +235,7 @@ export const InquiryForm: React.FC<InquiryFormProps> = ({
           type="submit"
           variant="primary"
           size="lg"
-          className="w-full text-center rounded-xl font-semibold bg-[#165B33] hover:bg-[#124A2A] text-white transition-colors"
+          className="w-full text-center rounded-xl font-semibold bg-[#1E7C46] hover:bg-[#176337] text-white transition-colors"
           disabled={status === 'loading'}
         >
           {status === 'loading' ? (

@@ -30,10 +30,10 @@ export const PackagesContent: React.FC = () => {
     <div className="py-12 sm:py-20">
       {/* Page Header */}
       <Container className="mb-14">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2E7D32]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#2E7D32]">
           {t.packages.tag}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-tight mt-2 max-w-3xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-normal mt-2 max-w-3xl leading-tight">
           {t.packages.title}
         </h1>
         <p className="text-base sm:text-lg text-[#5A625D] mt-4 max-w-2xl leading-relaxed">
@@ -47,7 +47,7 @@ export const PackagesContent: React.FC = () => {
           </div>
           <button
             onClick={() => setShowComparison(!showComparison)}
-            className="px-4 py-2 text-xs font-semibold rounded-[3px] border border-[#165B33] text-[#165B33] hover:bg-[#F9FAFB] transition-colors cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold rounded-[3px] border border-[#1E7C46] text-[#1E7C46] hover:bg-[#F9FAFB] transition-colors cursor-pointer"
           >
             {showComparison
               ? lang === 'bn' ? 'কার্ড গ্রিড দেখুন' : 'Switch to Cards'
@@ -79,7 +79,7 @@ export const PackagesContent: React.FC = () => {
         {/* Informational Policy Banner */}
         <div className="mt-10 p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-[4px] grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[#111827]">
           <div className="flex items-start gap-3">
-            <CreditCard className="w-5 h-5 text-[#165B33] shrink-0" />
+            <CreditCard className="w-5 h-5 text-[#1E7C46] shrink-0" />
             <div>
               <strong className="block text-sm text-[#111827] mb-1">
                 {lang === 'bn' ? 'কিস্তি ও এককালীন সুবিধা' : 'Payment Flexibility'}
@@ -91,7 +91,7 @@ export const PackagesContent: React.FC = () => {
           </div>
 
           <div className="flex items-start gap-3">
-            <Calendar className="w-5 h-5 text-[#165B33] shrink-0" />
+            <Calendar className="w-5 h-5 text-[#1E7C46] shrink-0" />
             <div>
               <strong className="block text-sm text-[#111827] mb-1">
                 {lang === 'bn' ? 'আতিথেয়তা সেবা' : 'Hospitality Days'}
@@ -103,7 +103,7 @@ export const PackagesContent: React.FC = () => {
           </div>
 
           <div className="flex items-start gap-3">
-            <ShieldCheck className="w-5 h-5 text-[#165B33] shrink-0" />
+            <ShieldCheck className="w-5 h-5 text-[#1E7C46] shrink-0" />
             <div>
               <strong className="block text-sm text-[#111827] mb-1">
                 {lang === 'bn' ? 'সাফ-কবলা নিশ্চয়তা' : 'Saf-Kabala Deed'}

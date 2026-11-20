@@ -58,6 +58,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'DFI Resort',
+  },
   openGraph: {
     type: 'website',
     locale: 'bn_BD',
@@ -113,7 +128,7 @@ export default async function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-full flex flex-col bg-white text-[#111827] font-sans antialiased selection:bg-[#165B33] selection:text-white">
+      <body className="min-h-full flex flex-col bg-white text-[#111827] font-sans antialiased selection:bg-[#1E7C46] selection:text-white">
         <LanguageProvider initialLang={initialLang}>
           <SkipLink />
           <Header />

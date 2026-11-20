@@ -22,7 +22,7 @@ export default function ErrorBoundary({
         <div className="w-16 h-16 mx-auto mb-6 bg-red-50 text-red-700 flex items-center justify-center rounded-full border border-red-200">
           <AlertTriangle className="w-8 h-8 text-red-600" />
         </div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-[#0E3B24] tracking-tight mb-3">
+        <h1 className="text-2xl sm:text-3xl font-bold text-[#0E3B24] tracking-normal mb-3">
           একটি অপ্রত্যাশিত সমস্যা দেখা দিয়েছে
         </h1>
         <p className="text-sm text-[#5A625D] max-w-md mx-auto mb-8 leading-relaxed">

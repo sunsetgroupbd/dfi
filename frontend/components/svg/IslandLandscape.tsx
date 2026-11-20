@@ -71,7 +71,7 @@ export const IslandLandscape: React.FC<SvgProps> = ({
     />
     <path
       d="M230 375C280 310 390 290 520 290C630 290 700 325 730 375C690 410 600 425 500 425C380 425 270 410 230 375Z"
-      fill="#165B33"
+      fill="#1E7C46"
     />
 
     {/* Premium Resort Architectural Complex (Right side of island) */}
@@ -94,7 +94,7 @@ export const IslandLandscape: React.FC<SvgProps> = ({
       
       {/* Villa Block 2 (Adjacent Wing) */}
       <rect x="115" y="55" width="105" height="75" rx="3" fill="#F8FAFC" stroke="#0D2F1D" strokeWidth="2" />
-      <polygon points="108,55 167,30 226,55" fill="#165B33" stroke="#0D2F1D" strokeWidth="2" />
+      <polygon points="108,55 167,30 226,55" fill="#1E7C46" stroke="#0D2F1D" strokeWidth="2" />
       <rect x="128" y="65" width="36" height="18" fill="#E0F2FE" stroke="#0D2F1D" strokeWidth="1.5" />
       <rect x="172" y="65" width="36" height="18" fill="#E0F2FE" stroke="#0D2F1D" strokeWidth="1.5" />
       <rect x="128" y="92" width="80" height="22" fill="#E0F2FE" stroke="#0D2F1D" strokeWidth="1.5" />
@@ -114,11 +114,11 @@ export const IslandLandscape: React.FC<SvgProps> = ({
     <g transform="translate(420, 110)">
       <path d="M50 250C40 180 55 100 80 30" stroke="#0D2F1D" strokeWidth="6" strokeLinecap="round" />
       {/* Palm fronds */}
-      <path d="M80 30C40 -10 -30 10 -60 50" stroke="#165B33" strokeWidth="4.5" strokeLinecap="round" />
-      <path d="M80 30C70 -30 110 -50 160 -20" stroke="#165B33" strokeWidth="4.5" strokeLinecap="round" />
+      <path d="M80 30C40 -10 -30 10 -60 50" stroke="#1E7C46" strokeWidth="4.5" strokeLinecap="round" />
+      <path d="M80 30C70 -30 110 -50 160 -20" stroke="#1E7C46" strokeWidth="4.5" strokeLinecap="round" />
       <path d="M80 30C30 10 -20 50 -30 90" stroke="#15803D" strokeWidth="4" strokeLinecap="round" />
       <path d="M80 30C130 10 180 40 190 80" stroke="#15803D" strokeWidth="4" strokeLinecap="round" />
-      <path d="M80 30C90 -40 100 -60 110 -80" stroke="#165B33" strokeWidth="3.5" strokeLinecap="round" />
+      <path d="M80 30C90 -40 100 -60 110 -80" stroke="#1E7C46" strokeWidth="3.5" strokeLinecap="round" />
       {/* Coconuts */}
       <circle cx="76" cy="35" r="4" fill="#D97706" />
       <circle cx="84" cy="38" r="4" fill="#D97706" />
@@ -127,8 +127,8 @@ export const IslandLandscape: React.FC<SvgProps> = ({
     {/* Palm 2 - Leaning Palm */}
     <g transform="translate(360, 150)">
       <path d="M40 210C30 150 45 90 70 25" stroke="#0D2F1D" strokeWidth="5" strokeLinecap="round" />
-      <path d="M70 25C30 -10 -20 10 -50 40" stroke="#165B33" strokeWidth="3.5" strokeLinecap="round" />
-      <path d="M70 25C60 -20 100 -40 140 -15" stroke="#165B33" strokeWidth="3.5" strokeLinecap="round" />
+      <path d="M70 25C30 -10 -20 10 -50 40" stroke="#1E7C46" strokeWidth="3.5" strokeLinecap="round" />
+      <path d="M70 25C60 -20 100 -40 140 -15" stroke="#1E7C46" strokeWidth="3.5" strokeLinecap="round" />
       <path d="M70 25C20 10 -15 45 -25 75" stroke="#15803D" strokeWidth="3" strokeLinecap="round" />
       <path d="M70 25C110 10 150 35 160 70" stroke="#15803D" strokeWidth="3" strokeLinecap="round" />
     </g>
@@ -136,8 +136,8 @@ export const IslandLandscape: React.FC<SvgProps> = ({
     {/* Palm 3 - Left Accent Palm */}
     <g transform="translate(260, 200)">
       <path d="M30 160C25 110 35 70 55 20" stroke="#0D2F1D" strokeWidth="4" strokeLinecap="round" />
-      <path d="M55 20C25 -10 -15 5 -40 30" stroke="#165B33" strokeWidth="3" strokeLinecap="round" />
-      <path d="M55 20C45 -15 80 -30 115 -10" stroke="#165B33" strokeWidth="3" strokeLinecap="round" />
+      <path d="M55 20C25 -10 -15 5 -40 30" stroke="#1E7C46" strokeWidth="3" strokeLinecap="round" />
+      <path d="M55 20C45 -15 80 -30 115 -10" stroke="#1E7C46" strokeWidth="3" strokeLinecap="round" />
       <path d="M55 20C15 5 -10 30 -20 55" stroke="#15803D" strokeWidth="2.5" strokeLinecap="round" />
       <path d="M55 20C90 5 125 25 135 50" stroke="#15803D" strokeWidth="2.5" strokeLinecap="round" />
     </g>

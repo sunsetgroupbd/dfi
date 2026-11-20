@@ -3,8 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
-import { CardShapePattern } from '@/components/svg/CardShapePattern';
-import { Home, Banknote, Clock, CalendarDays } from 'lucide-react';
+import { FaHouseChimney, FaMoneyBillWave, FaClock, FaCalendarCheck } from 'react-icons/fa6';
 
 export const KeyFactsSection: React.FC = () => {
   const { lang } = useLanguage();
@@ -15,13 +14,13 @@ export const KeyFactsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Heading & Accent (3.5 cols) */}
           <div className="lg:col-span-4 space-y-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#165B33]">
+            <span className="text-[11px] font-bold uppercase tracking-normal text-[#1E7C46]">
               {lang === 'bn' ? 'মূল পরিসংখ্যান' : 'KEY FACTS'}
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111827] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111827] tracking-normal">
               {lang === 'bn' ? 'এক নজরে DFI' : 'DFI At A Glance'}
             </h2>
-            <div className="w-12 h-1 bg-[#165B33] rounded-full mt-2"></div>
+            <div className="w-12 h-1 bg-[#1E7C46] rounded-full mt-2"></div>
             <p className="text-xs sm:text-sm text-[#4B5563] pt-2">
               {lang === 'bn'
                 ? 'আইনগত কাঠামোর অধীনে সুনির্দিষ্ট ও স্বচ্ছ বিনিয়োগ পরিসংখ্যান।'
@@ -32,13 +31,12 @@ export const KeyFactsSection: React.FC = () => {
           {/* Right Column: 4 App-style Metric Cards (8 cols) */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
             {/* Stat Card 1 */}
-            <div className="relative overflow-hidden bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
-              <CardShapePattern variant="rings" color="#E5E7EB" className="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
-                <Home className="w-5 h-5 text-[#165B33]" />
+            <div className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
+              <div className="w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
+                <FaHouseChimney className="w-4.5 h-4.5 text-[#1E7C46]" />
               </div>
-              <div className="relative z-10">
-                <span className="block text-3xl font-extrabold text-[#111827] font-mono leading-none">
+              <div>
+                <span className="block text-3xl font-bold text-[#111827] font-mono leading-none">
                   {lang === 'bn' ? '৪টি' : '4'}
                 </span>
                 <span className="text-xs text-[#111827] font-bold block mt-2">
@@ -51,13 +49,12 @@ export const KeyFactsSection: React.FC = () => {
             </div>
 
             {/* Stat Card 2 */}
-            <div className="relative overflow-hidden bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
-              <CardShapePattern variant="circle" color="#E5E7EB" className="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
-                <Banknote className="w-5 h-5 text-[#165B33]" />
+            <div className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
+              <div className="w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
+                <FaMoneyBillWave className="w-4.5 h-4.5 text-[#1E7C46]" />
               </div>
-              <div className="relative z-10">
-                <span className="text-2xl font-extrabold text-[#111827] font-mono leading-tight block">
+              <div>
+                <span className="text-2xl font-bold text-[#111827] font-mono leading-tight block">
                   {lang === 'bn' ? '৳ ৩,৫০,০০০' : '৳ 350,000'}
                 </span>
                 <span className="text-xs text-[#111827] font-bold block mt-2">
@@ -70,13 +67,12 @@ export const KeyFactsSection: React.FC = () => {
             </div>
 
             {/* Stat Card 3 */}
-            <div className="relative overflow-hidden bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
-              <CardShapePattern variant="wave" color="#E5E7EB" className="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
-                <Clock className="w-5 h-5 text-[#165B33]" />
+            <div className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
+              <div className="w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
+                <FaClock className="w-4.5 h-4.5 text-[#1E7C46]" />
               </div>
-              <div className="relative z-10">
-                <span className="block text-2xl font-extrabold text-[#111827] font-mono leading-none">
+              <div>
+                <span className="block text-2xl font-bold text-[#111827] font-mono leading-none">
                   {lang === 'bn' ? '১৯ মিনিট' : '19 Min'}
                 </span>
                 <span className="text-xs text-[#111827] font-bold block mt-2">
@@ -89,13 +85,12 @@ export const KeyFactsSection: React.FC = () => {
             </div>
 
             {/* Stat Card 4 */}
-            <div className="relative overflow-hidden bg-white hover:bg-white border border-[#E5E7EB] hover:border-[#165B33] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
-              <CardShapePattern variant="rings" color="#E5E7EB" className="w-28 h-28 opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#165B33]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
-                <CalendarDays className="w-5 h-5 text-[#165B33]" />
+            <div className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] rounded-2xl p-5 transition-all duration-200 shadow-xs hover:shadow-md flex flex-col justify-between group">
+              <div className="w-11 h-11 rounded-xl border border-[#E5E7EB] bg-[#F9FAFB] group-hover:bg-white group-hover:border-[#1E7C46]/30 flex items-center justify-center shrink-0 shadow-xs mb-4">
+                <FaCalendarCheck className="w-4.5 h-4.5 text-[#1E7C46]" />
               </div>
-              <div className="relative z-10">
-                <span className="text-xl font-extrabold text-[#165B33] font-mono leading-tight block">
+              <div>
+                <span className="text-xl font-bold text-[#1E7C46] font-mono leading-tight block">
                   {lang === 'bn' ? '৳ ৪,৯৯০ /মাস' : '৳ 4,990 /mo'}
                 </span>
                 <span className="text-xs text-[#111827] font-bold block mt-2">

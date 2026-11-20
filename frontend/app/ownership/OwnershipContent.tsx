@@ -14,10 +14,10 @@ export const OwnershipContent: React.FC = () => {
     <div className="py-12 sm:py-20">
       {/* Header Banner */}
       <Container className="mb-14">
-        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2E7D32]">
+        <span className="text-xs font-semibold uppercase tracking-normal text-[#2E7D32]">
           {t.nav.ownership}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-tight mt-2 max-w-3xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0E3B24] tracking-normal mt-2 max-w-3xl leading-tight">
           {t.ownership.title}
         </h1>
         <p className="text-base sm:text-lg text-[#5A625D] mt-4 max-w-2xl leading-relaxed">
@@ -33,7 +33,7 @@ export const OwnershipContent: React.FC = () => {
         <Container>
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="text-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#165B33]">
+              <span className="text-xs font-semibold uppercase tracking-normal text-[#1E7C46]">
                 {lang === 'bn' ? 'আইনি ও প্রাতিষ্ঠানিক ভিত্তি' : 'Statutory & Corporate Governance'}
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mt-1">
@@ -43,7 +43,7 @@ export const OwnershipContent: React.FC = () => {
 
             <div className="bg-[#F9FAFB] border border-[#E5E7EB] p-6 sm:p-8 rounded-[4px] space-y-6 text-sm text-[#4B5563] leading-relaxed">
               <div className="flex items-start gap-3.5">
-                <ShieldCheck className="w-6 h-6 text-[#165B33] shrink-0 mt-0.5" />
+                <ShieldCheck className="w-6 h-6 text-[#1E7C46] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-[#111827] text-base mb-1">
                     {lang === 'bn' ? '১. কোম্পানি আইন ১৯৯৪ এর পূর্ণাঙ্গ আনুগত্য' : '1. Compliance with Company Act 1994'}
@@ -57,7 +57,7 @@ export const OwnershipContent: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3.5 pt-4 border-t border-[#E5E7EB]">
-                <Scale className="w-6 h-6 text-[#165B33] shrink-0 mt-0.5" />
+                <Scale className="w-6 h-6 text-[#1E7C46] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-[#111827] text-base mb-1">
                     {lang === 'bn' ? '২. শরীয়াহ সুপারভাইজরি কমিটি' : '2. Shariah Supervisory Committee'}
@@ -71,7 +71,7 @@ export const OwnershipContent: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3.5 pt-4 border-t border-[#E5E7EB]">
-                <FileText className="w-6 h-6 text-[#165B33] shrink-0 mt-0.5" />
+                <FileText className="w-6 h-6 text-[#1E7C46] shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-[#111827] text-base mb-1">
                     {lang === 'bn' ? '৩. সাফ-কবলা হস্তান্তর ও বিক্রয় অধিকার' : '3. Deeded Freehold Transferability'}
