@@ -3,6 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 import {
   FaShieldHalved,
   FaScaleBalanced,
@@ -97,7 +98,7 @@ export const WhyInvestSection: React.FC = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-4">
           {/* Left Column: Heading (4 cols) */}
-          <div className="lg:col-span-4 space-y-2">
+          <FadeIn direction="right" className="lg:col-span-4 space-y-2">
             <span className="text-[11px] font-bold uppercase tracking-normal text-[#1E7C46]">
               {lang === 'bn' ? 'বিনিয়োগের গুরুত্ব' : 'WHY INVEST IN DFI?'}
             </span>
@@ -112,29 +113,31 @@ export const WhyInvestSection: React.FC = () => {
                 ? 'সাফ-কবলা জমি, শরীয়াহ তদারকি ও প্রাতিষ্ঠানিক নিরাপত্তার সুদৃঢ় মেলবন্ধন।'
                 : 'Freehold Saf-Kabala deed combined with Shariah oversight and capital growth.'}
             </p>
-          </div>
+          </FadeIn>
 
-          {/* Right Column: 10 App-style Cards (2 per row on mobile, 3 on tablet, 5 on desktop) */}
-          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2.5 sm:gap-3.5">
+          {/* Right Column: 10 App-style Cards with Smooth Stagger Entrance */}
+          <StaggerContainer
+            staggerDelay={0.05}
+            className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2.5 sm:gap-3.5"
+          >
             {items.map((item) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={item.id}
-                  className="bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] p-3 sm:p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between min-h-[105px] sm:min-h-[125px] group"
-                >
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/40 flex items-center justify-center mb-2.5 sm:mb-3 shadow-xs shrink-0">
-                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1E7C46]" />
+                <StaggerItem key={item.id}>
+                  <div className="h-full bg-white hover:bg-[#F9FAFB] border border-[#E5E7EB] hover:border-[#1E7C46] hover:-translate-y-1 p-3 sm:p-4 rounded-xl shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between min-h-[105px] sm:min-h-[125px] group">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#F9FAFB] group-hover:bg-white border border-[#E5E7EB] group-hover:border-[#1E7C46]/40 flex items-center justify-center mb-2.5 sm:mb-3 shadow-xs shrink-0 transition-colors">
+                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1E7C46]" />
+                    </div>
+                    <div>
+                      <h4 className="text-[11px] sm:text-xs font-semibold text-[#111827] leading-tight sm:leading-snug">
+                        {lang === 'bn' ? item.titleBn : item.titleEn}
+                      </h4>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-[11px] sm:text-xs font-semibold text-[#111827] leading-tight sm:leading-snug">
-                      {lang === 'bn' ? item.titleBn : item.titleEn}
-                    </h4>
-                  </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </Container>
     </section>

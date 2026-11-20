@@ -60,12 +60,12 @@ export const Header: React.FC = () => {
             : 'border-b border-[#E5E7EB]'
         }`}
       >
-        <Container className="flex items-center justify-between h-20">
+        <Container className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo on Left */}
           <Link
             href="/"
             aria-label="Dhaka Fantasy Island - Home"
-            className="flex items-center shrink-0 focus-visible:outline-none group"
+            className="flex items-center shrink-0 focus-visible:outline-none group min-w-0"
           >
             <DFILogo variant="header" className="group-hover:opacity-90 transition-opacity" />
           </Link>
@@ -127,11 +127,11 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Right Bar */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden shrink-0">
             <button
               onClick={toggleLang}
               aria-label="Toggle language"
-              className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg border border-[#E5E7EB] bg-white text-[#111827]"
+              className="flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded-lg border border-[#E5E7EB] bg-white text-[#111827] shadow-2xs hover:bg-[#F9FAFB] cursor-pointer"
             >
               <span>{lang === 'bn' ? 'EN' : 'বাং'}</span>
             </button>
@@ -140,7 +140,7 @@ export const Header: React.FC = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-              className="p-2 text-[#111827] hover:bg-[#F3F4F6] rounded-xl border border-[#E5E7EB] cursor-pointer"
+              className="p-1.5 sm:p-2 text-[#111827] hover:bg-[#F3F4F6] rounded-xl border border-[#E5E7EB] cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

@@ -9,6 +9,7 @@ import { Container } from '@/components/ui/Container';
 import { PackageCard } from './PackageCard';
 import { PackageDrawer } from './PackageDrawer';
 import { PackageComparisonTable } from './PackageComparisonTable';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface PackagesSectionProps {
@@ -37,7 +38,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
     <section id="packages-section" className="py-16 sm:py-24 bg-white border-b border-[#E5E7EB]">
       <Container>
         {/* Section Header with Right View All Link */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
+        <FadeIn direction="up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-normal text-[#6B7280]">
               {lang === 'bn' ? 'আমাদের প্যাকেজসমূহ' : 'OUR PACKAGES'}
@@ -64,20 +65,21 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
-        </div>
+        </FadeIn>
 
         {/* View Mode: Cards (2 in a row on mobile, 4 on desktop) or Comparison Table */}
         {!showComparison ? (
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
+          <StaggerContainer staggerDelay={0.08} className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
             {t.packages.items.map((pkg) => (
-              <PackageCard
-                key={pkg.id}
-                pkg={pkg}
-                onOpenDetails={handleOpenDetails}
-                onSelectForInquiry={handleSelectForInquiry}
-              />
+              <StaggerItem key={pkg.id}>
+                <PackageCard
+                  pkg={pkg}
+                  onOpenDetails={handleOpenDetails}
+                  onSelectForInquiry={handleSelectForInquiry}
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         ) : (
           <PackageComparisonTable
             packages={t.packages.items}

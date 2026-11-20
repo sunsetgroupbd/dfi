@@ -4,6 +4,7 @@ import React from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { CardShapePattern } from '@/components/svg/CardShapePattern';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 import { FileText, Laptop } from 'lucide-react';
 
 export const OwnershipSection: React.FC = () => {
@@ -16,7 +17,7 @@ export const OwnershipSection: React.FC = () => {
 
       <Container className="relative z-10">
         {/* Section Heading */}
-        <div className="mb-12 sm:mb-14">
+        <FadeIn direction="up" className="mb-12 sm:mb-14">
           <span className="text-[11px] font-bold uppercase tracking-normal text-[#86EFAC]">
             {lang === 'bn' ? 'মালিকানা প্রক্রিয়া' : 'OWNERSHIP PROCESS'}
           </span>
@@ -30,81 +31,87 @@ export const OwnershipSection: React.FC = () => {
               ? 'আইনগত কাঠামোর অধীনে বুকিং থেকে রেজিস্ট্রি পর্যন্ত প্রতিটি ধাপ সুনির্দিষ্ট ও স্বচ্ছ।'
               : 'A transparent step-by-step statutory process from initial booking to deed execution.'}
           </p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Left Column: 3 Horizontal Steps in modern rounded cardviews (3 in a row on mobile and desktop) */}
           <div className="lg:col-span-8 space-y-4">
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+            <StaggerContainer staggerDelay={0.1} className="grid grid-cols-3 gap-2 sm:gap-4">
               {/* Step 1 */}
-              <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-200 group">
-                <CardShapePattern variant="arch" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
-                <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
-                    1
+              <StaggerItem>
+                <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
+                  <CardShapePattern variant="arch" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
+                  <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                      1
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
+                      {lang === 'bn' ? 'বুকিং' : 'Step 1'}
+                    </span>
                   </div>
-                  <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
-                    {lang === 'bn' ? 'বুকিং' : 'Step 1'}
-                  </span>
+                  <div className="relative z-10">
+                    <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
+                      {lang === 'bn' ? 'মানি রিসিট প্রদান' : 'Money Receipt'}
+                    </h3>
+                    <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
+                      {lang === 'bn'
+                        ? 'সানসেটের নামে জমা অর্থের অফিশিয়াল মানি রিসিট প্রদান, যেখানে ওনারশিপ নম্বর স্পষ্টভাবে উল্লেখ থাকবে।'
+                        : 'Money receipt from Sunset for deposited amount, showing ownership ID.'}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
-                    {lang === 'bn' ? 'মানি রিসিট প্রদান' : 'Money Receipt'}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
-                    {lang === 'bn'
-                      ? 'সানসেটের নামে জমা অর্থের অফিশিয়াল মানি রিসিট প্রদান, যেখানে ওনারশিপ নম্বর স্পষ্টভাবে উল্লেখ থাকবে।'
-                      : 'Money receipt from Sunset for deposited amount, showing ownership ID.'}
-                  </p>
-                </div>
-              </div>
+              </StaggerItem>
 
               {/* Step 2 */}
-              <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-200 group">
-                <CardShapePattern variant="wave" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
-                <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
-                    2
+              <StaggerItem>
+                <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
+                  <CardShapePattern variant="wave" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
+                  <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                      2
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
+                      {lang === 'bn' ? 'চুক্তি' : 'Step 2'}
+                    </span>
                   </div>
-                  <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
-                    {lang === 'bn' ? 'চুক্তি' : 'Step 2'}
-                  </span>
+                  <div className="relative z-10">
+                    <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
+                      {lang === 'bn' ? 'ডিড অব এগ্রিমেন্ট' : 'Deed of Agreement'}
+                    </h3>
+                    <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
+                      {lang === 'bn'
+                        ? 'ডাউন পেমেন্টের পর শেয়ারহোল্ডার ও কোম্পানির মধ্যে চুক্তি সম্পাদন, যাতে সুবিধা ও শর্তাবলী অন্তর্ভুক্ত থাকবে।'
+                        : 'Formal Deed of Agreement with details, benefits, share-transfer rules and terms.'}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
-                    {lang === 'bn' ? 'ডিড অব এগ্রিমেন্ট' : 'Deed of Agreement'}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
-                    {lang === 'bn'
-                      ? 'ডাউন পেমেন্টের পর শেয়ারহোল্ডার ও কোম্পানির মধ্যে চুক্তি সম্পাদন, যাতে সুবিধা ও শর্তাবলী অন্তর্ভুক্ত থাকবে।'
-                      : 'Formal Deed of Agreement with details, benefits, share-transfer rules and terms.'}
-                  </p>
-                </div>
-              </div>
+              </StaggerItem>
 
               {/* Step 3 */}
-              <div className="relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-200 group">
-                <CardShapePattern variant="crest" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
-                <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
-                    3
+              <StaggerItem>
+                <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
+                  <CardShapePattern variant="crest" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
+                  <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                      3
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
+                      {lang === 'bn' ? 'রেজিস্ট্রি' : 'Final Step'}
+                    </span>
                   </div>
-                  <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
-                    {lang === 'bn' ? 'রেজিস্ট্রি' : 'Final Step'}
-                  </span>
+                  <div className="relative z-10">
+                    <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
+                      {lang === 'bn' ? 'সাফ-কবলা হস্তান্তর' : 'Saf-Kabala Handover'}
+                    </h3>
+                    <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
+                      {lang === 'bn'
+                        ? 'শেয়ারের সমুদয় মূল্য সম্পূর্ণ পরিশোধের পর সরকার নির্ধারিত রেজিস্ট্রির মাধ্যমে সাফ-কবলা দলিল হস্তান্তর।'
+                        : "After full payment, the land's registered saf-kabala is officially handed over."}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative z-10">
-                  <h3 className="text-xs sm:text-base font-bold text-white leading-tight">
-                    {lang === 'bn' ? 'সাফ-কবলা হস্তান্তর' : 'Saf-Kabala Handover'}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs text-[#CBD5E1] leading-tight sm:leading-relaxed mt-1 sm:mt-2 line-clamp-3 sm:line-clamp-none">
-                    {lang === 'bn'
-                      ? 'শেয়ারের সমুদয় মূল্য সম্পূর্ণ পরিশোধের পর সরকার নির্ধারিত রেজিস্ট্রির মাধ্যমে সাফ-কবলা দলিল হস্তান্তর।'
-                      : "After full payment, the land's registered saf-kabala is officially handed over."}
-                  </p>
-                </div>
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
 
           {/* Right Column: Exit Policy & ERP updates boxes (2 in a row on mobile, stacked on desktop) */}

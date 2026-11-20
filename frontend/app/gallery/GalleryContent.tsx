@@ -5,6 +5,7 @@ import { GalleryItem } from '@/lib/types';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { GalleryLightbox } from '@/components/sections/GalleryLightbox';
+import { VideoShowcaseSection } from '@/components/sections/VideoShowcaseSection';
 import Image from 'next/image';
 import { ZoomIn, Image as ImageIcon } from 'lucide-react';
 
@@ -75,6 +76,9 @@ export const GalleryContent: React.FC = () => {
           ))}
         </div>
       </Container>
+
+      {/* Official Project Video Walkthroughs */}
+      <VideoShowcaseSection />
 
       {/* Lightbox Modal */}
       <GalleryLightbox item={selectedItem} onClose={() => setSelectedItem(null)} />

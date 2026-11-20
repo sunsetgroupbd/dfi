@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -31,7 +32,12 @@ export const HeroSection: React.FC = () => {
       {/* 2. Hero Content (Text and Buttons Overlayed on Top of Image) */}
       <div className="relative z-10 pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28">
         <Container>
-          <div className="max-w-2xl lg:max-w-3xl space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-2xl lg:max-w-3xl space-y-6"
+          >
             {/* Editorial Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-white tracking-normal leading-[1.22] drop-shadow-sm">
               {lang === 'bn' ? (
@@ -76,7 +82,7 @@ export const HeroSection: React.FC = () => {
                 href="#packages-section"
                 variant="primary"
                 size="lg"
-                className="bg-[#1E7C46] hover:bg-[#176337] text-white border border-[#22C55E]/40 shadow-lg shadow-black/30 rounded-xl px-7 py-3 text-sm font-semibold"
+                className="bg-[#1E7C46] hover:bg-[#176337] active:scale-[0.98] transition-all text-white border border-[#22C55E]/40 shadow-lg shadow-black/30 rounded-xl px-7 py-3 text-sm font-semibold"
               >
                 {t.hero.ctaPrimary}
               </Button>
@@ -84,17 +90,22 @@ export const HeroSection: React.FC = () => {
                 href="/contact"
                 variant="secondary"
                 size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md rounded-xl px-7 py-3 text-sm font-semibold"
+                className="bg-white/10 hover:bg-white/20 active:scale-[0.98] transition-all text-white border border-white/30 backdrop-blur-md rounded-xl px-7 py-3 text-sm font-semibold"
               >
                 {t.hero.ctaSecondary}
               </Button>
             </div>
-          </div>
+          </motion.div>
         </Container>
       </div>
 
       {/* 3. Full-width Attached Statutory Fact Strip (3 cards in a row on mobile and desktop) */}
-      <div className="relative z-10 bg-[#0A2617]/95 backdrop-blur-md border-t border-[#18422A] py-4 sm:py-6 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        className="relative z-10 bg-[#0A2617]/95 backdrop-blur-md border-t border-[#18422A] py-4 sm:py-6 text-white"
+      >
         <Container>
           <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
             {/* Fact 1 */}
@@ -143,7 +154,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
         </Container>
-      </div>
+      </motion.div>
     </section>
   );
 };

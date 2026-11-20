@@ -1,9 +1,9 @@
 import React from 'react';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { KeyFactsSection } from '@/components/sections/KeyFactsSection';
 import { WhyInvestSection } from '@/components/sections/WhyInvestSection';
 import { PackagesSection } from '@/components/sections/PackagesSection';
 import { OwnershipSection } from '@/components/sections/OwnershipSection';
+import { VideoShowcaseSection } from '@/components/sections/VideoShowcaseSection';
 import { LocationSection } from '@/components/sections/LocationSection';
 import { ParentGroupSection } from '@/components/sections/ParentGroupSection';
 import { FAQSection } from '@/components/sections/FAQSection';
@@ -15,17 +15,17 @@ export default function HomePage() {
       {/* 1. Hero with Attached Statutory Fact Strip */}
       <HeroSection />
 
-      {/* 2. Key Facts: DFI At A Glance (4 Metric Columns) */}
-      <KeyFactsSection />
-
-      {/* 3. Why Invest in DFI (10 Advantage Grid) */}
+      {/* 2. Why Invest in DFI (10 Advantage Grid) */}
       <WhyInvestSection />
 
-      {/* 4. Our Packages (Bronze, Silver, Gold, Platinum) */}
+      {/* 3. Our Packages (Bronze, Silver, Gold, Platinum) */}
       <PackagesSection />
 
-      {/* 5. Ownership Process (Simple, Secure, Shariah Compliant) */}
+      {/* 4. Ownership Process (Simple, Secure, Shariah Compliant) */}
       <OwnershipSection />
+
+      {/* 5. Official Project Videos & Documentaries */}
+      <VideoShowcaseSection />
 
       {/* 6. Prime Location (Mohammadpur / Basila Corridor & Route Map) */}
       <LocationSection />
