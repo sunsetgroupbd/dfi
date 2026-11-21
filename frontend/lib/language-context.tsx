@@ -32,6 +32,14 @@ export function LanguageProvider({
   const [lang, setLangState] = useState<Language>(initialLang);
 
   useEffect(() => {
+    // Read saved cookie on client mount
+    const match = document.cookie.match(/(?:^|;\s*)dfi_lang=([^;]+)/);
+    if (match && (match[1] === 'en' || match[1] === 'bn')) {
+      setLangState(match[1] as Language);
+    }
+  }, []);
+
+  useEffect(() => {
     // Sync document attribute on client
     document.documentElement.lang = lang;
   }, [lang]);

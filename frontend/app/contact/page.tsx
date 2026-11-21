@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Suspense fallback={<div className="py-20 text-center text-sm text-[#5A625D]">Loading contact information...</div>}>
+    <Suspense fallback={<div className="py-20 min-h-[50vh]" />}>
       <ContactContent />
     </Suspense>
   );

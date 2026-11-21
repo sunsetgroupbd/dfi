@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
 import { Poppins, Hind_Siliguri, Noto_Sans_Bengali } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/language-context';
-import { Language } from '@/lib/types';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
@@ -118,18 +116,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const langCookie = cookieStore.get('dfi_lang')?.value;
-  const initialLang: Language = langCookie === 'en' || langCookie === 'bn' ? langCookie : 'bn';
-
   return (
     <html
-      lang={initialLang}
+      lang="bn"
       suppressHydrationWarning
       className={`${poppins.variable} ${hindSiliguri.variable} ${notoSansBengali.variable} h-full`}
     >
@@ -137,7 +131,7 @@ export default async function RootLayout({
         <JsonLd />
       </head>
       <body className="min-h-full flex flex-col bg-white text-[#111827] font-sans antialiased selection:bg-[#1E7C46] selection:text-white">
-        <LanguageProvider initialLang={initialLang}>
+        <LanguageProvider initialLang="bn">
           <SkipLink />
           <Header />
           <main id="main-content" className="flex-1 pt-20">
