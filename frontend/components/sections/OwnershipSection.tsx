@@ -42,7 +42,7 @@ export const OwnershipSection: React.FC = () => {
                 <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
                   <CardShapePattern variant="arch" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
                   <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#86EFAC] text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
                       1
                     </div>
                     <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
@@ -67,7 +67,7 @@ export const OwnershipSection: React.FC = () => {
                 <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
                   <CardShapePattern variant="wave" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
                   <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#86EFAC] text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
                       2
                     </div>
                     <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
@@ -92,7 +92,7 @@ export const OwnershipSection: React.FC = () => {
                 <div className="h-full relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] hover:-translate-y-1 border border-white/10 p-2.5 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 group">
                   <CardShapePattern variant="crest" color="#86EFAC" className="w-16 h-16 sm:w-24 sm:h-24 opacity-20" />
                   <div className="relative z-10 flex items-center justify-between mb-2.5 sm:mb-4">
-                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
+                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#86EFAC] text-[#0A2617] font-bold font-mono text-xs sm:text-sm flex items-center justify-center shadow-md">
                       3
                     </div>
                     <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#86EFAC] tracking-normal">
