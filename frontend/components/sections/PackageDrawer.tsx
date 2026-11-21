@@ -72,7 +72,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                   <span className="text-xs font-medium uppercase text-[#6B7280]">
                     {t.packages.priceLabel}
                   </span>
-                  <span className="text-2xl font-bold text-[#111827] tabular-nums font-mono">
+                  <span className="text-2xl font-bold text-[#111827]">
                     {lang === 'bn' ? pkg.priceFormattedBn : pkg.priceFormatted}
                   </span>
                 </div>
@@ -80,7 +80,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                   <span className="text-xs font-medium uppercase text-[#6B7280]">
                     {t.packages.bookingLabel}
                   </span>
-                  <span className="text-sm font-semibold text-[#1E7C46] tabular-nums font-mono">
+                  <span className="text-sm font-semibold text-[#1E7C46]">
                     {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
                   </span>
                 </div>

@@ -51,7 +51,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           </div>
           {/* Price */}
           <div className="mt-0.5 sm:mt-1">
-            <span className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#111827] font-mono tabular-nums leading-tight block">
+            <span className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-[#111827] tracking-tight leading-tight block">
               {lang === 'bn' ? pkg.priceFormattedBn : pkg.priceFormatted}
             </span>
           </div>
@@ -62,7 +62,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           {/* Booking */}
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'বুকিং:' : 'Booking:'}</span>
-            <span className="font-bold text-[#111827] font-mono tabular-nums">
+            <span className="font-bold text-[#111827]">
               {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
             </span>
           </div>
@@ -70,21 +70,21 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           {/* Area Formula: Land + Build = Total */}
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'জমি:' : 'Land:'}</span>
-            <span className="font-semibold text-[#111827] font-mono">
+            <span className="font-semibold text-[#111827]">
               {pkg.landArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'নির্মাণ:' : 'Build:'}</span>
-            <span className="font-semibold text-[#111827] font-mono">
+            <span className="font-semibold text-[#111827]">
               {pkg.buildArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
           <div className="flex justify-between items-center px-2 py-1 sm:px-3 sm:py-2 bg-[#F9FAFB] rounded-lg sm:rounded-xl border border-[#E5E7EB]/70">
             <span className="font-semibold text-[#111827]">{lang === 'bn' ? 'মোট:' : 'Total:'}</span>
-            <span className="font-bold text-[#1E7C46] font-mono text-xs sm:text-sm">
+            <span className="font-bold text-[#1E7C46] text-xs sm:text-sm">
               {pkg.totalArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
@@ -92,7 +92,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           {/* Accommodation Days */}
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'থাকা:' : 'Stay:'}</span>
-            <span className="font-bold text-[#111827] font-mono">
+            <span className="font-bold text-[#111827]">
               {pkg.accommodationDays} {lang === 'bn' ? 'দিন' : 'days'}
             </span>
           </div>
@@ -100,7 +100,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           {/* Restaurant & Extra Days Discount */}
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'ছাড়:' : 'Discount:'}</span>
-            <span className="font-bold text-[#1E7C46] font-mono">
+            <span className="font-bold text-[#1E7C46]">
               {pkg.restaurantDiscount}%
             </span>
           </div>

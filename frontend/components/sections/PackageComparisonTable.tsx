@@ -44,7 +44,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             {packages.map((pkg) => (
               <td
                 key={pkg.id}
-                className="p-4 text-center font-bold tabular-nums font-mono text-[#111827]"
+                className="p-4 text-center font-bold text-[#111827]"
               >
                 {lang === 'bn' ? pkg.priceFormattedBn : pkg.priceFormatted}
               </td>
@@ -59,7 +59,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             {packages.map((pkg) => (
               <td
                 key={pkg.id}
-                className="p-4 text-center tabular-nums font-mono text-[#1E7C46] font-semibold"
+                className="p-4 text-center text-[#1E7C46] font-semibold"
               >
                 {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
               </td>
@@ -72,7 +72,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'জমির অনুপাত' : 'Land Area'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center tabular-nums font-mono">
+              <td key={pkg.id} className="p-4 text-center">
                 {pkg.landArea} sft
               </td>
             ))}
@@ -84,7 +84,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'নির্মাণ অনুপাত' : 'Built Area'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center tabular-nums font-mono">
+              <td key={pkg.id} className="p-4 text-center">
                 {pkg.buildArea} sft
               </td>
             ))}
@@ -96,7 +96,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'মোট অনুপাত (জমির + নির্মাণ)' : 'Total Formula Area'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center tabular-nums text-[#1E7C46] font-mono">
+              <td key={pkg.id} className="p-4 text-center text-[#1E7C46]">
                 {pkg.totalArea} sft
               </td>
             ))}
@@ -121,7 +121,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'রেস্টুরেন্ট বিল ছাড়' : 'Dining Discount'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center font-medium font-mono">
+              <td key={pkg.id} className="p-4 text-center font-medium">
                 {pkg.restaurantDiscount}%
               </td>
             ))}
@@ -133,7 +133,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
               {lang === 'bn' ? 'অতিরিক্ত দিনে ছাড়' : 'Extra Stay Discount'}
             </td>
             {packages.map((pkg) => (
-              <td key={pkg.id} className="p-4 text-center font-medium font-mono">
+              <td key={pkg.id} className="p-4 text-center font-medium">
                 {pkg.extraDaysDiscount}%
               </td>
             ))}
