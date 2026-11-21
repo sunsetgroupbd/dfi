@@ -29,15 +29,15 @@ export function LanguageProvider({
   children: ReactNode;
   initialLang?: Language;
 }) {
-  const [lang, setLangState] = useState<Language>(initialLang);
-
-  useEffect(() => {
-    // Read saved cookie on client mount
-    const match = document.cookie.match(/(?:^|;\s*)dfi_lang=([^;]+)/);
-    if (match && (match[1] === 'en' || match[1] === 'bn')) {
-      setLangState(match[1] as Language);
+  const [lang, setLangState] = useState<Language>(() => {
+    if (typeof document !== 'undefined') {
+      const match = document.cookie.match(/(?:^|;\s*)dfi_lang=([^;]+)/);
+      if (match && (match[1] === 'en' || match[1] === 'bn')) {
+        return match[1] as Language;
+      }
     }
-  }, []);
+    return initialLang;
+  });
 
   useEffect(() => {
     // Sync document attribute on client
