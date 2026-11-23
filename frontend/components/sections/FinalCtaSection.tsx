@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { CardShapePattern } from '@/components/svg/CardShapePattern';
 import { FadeIn } from '@/components/ui/MotionWrapper';
 import { FaPhone, FaWhatsapp } from 'react-icons/fa6';
 
@@ -28,9 +27,6 @@ export const FinalCtaSection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#071F14]/85 via-[#071F14]/60 to-[#071F14]/35" />
             </div>
-
-            {/* SVG Shape Pattern */}
-            <CardShapePattern variant="crest" color="#22C55E" className="w-56 h-56 opacity-20" />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Text */}
