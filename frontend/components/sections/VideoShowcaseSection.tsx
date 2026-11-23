@@ -70,10 +70,6 @@ export const VideoShowcaseSection: React.FC = () => {
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6 sm:mb-8">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#E5E7EB] text-[#1E7C46] text-xs font-semibold uppercase tracking-normal rounded-xl shadow-2xs mb-2">
-                <FaYoutube className="w-3.5 h-3.5 text-[#FF0000]" />
-                <span>{lang === 'bn' ? 'অফিসিয়াল ভিডিও' : 'OFFICIAL VIDEOS'}</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal leading-tight">
                 {lang === 'bn'
                   ? 'সরেজমিনে ঢাকা ফ্যান্টাসি আইল্যান্ড'

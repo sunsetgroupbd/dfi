@@ -9,13 +9,10 @@ import {
   FaFacebookF, 
   FaInstagram, 
   FaYoutube, 
-  FaLinkedinIn, 
-  FaWhatsapp, 
-  FaPhone, 
-  FaEnvelope, 
-  FaLocationDot, 
-  FaClock 
+  FaLinkedinIn,
+  FaWhatsapp 
 } from 'react-icons/fa6';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -37,8 +34,8 @@ export const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
             {/* Column 1: Brand Info & Socials (4.5 cols) */}
             <div className="lg:col-span-4 space-y-4">
-              <Link href="/" className="inline-block focus-visible:outline-none">
-                <DFILogo variant="full" className="h-16 sm:h-20 w-auto" />
+              <Link href="/" className="inline-flex focus-visible:outline-none group">
+                <DFILogo variant="footer" className="group-hover:opacity-90 transition-opacity" />
               </Link>
               <p className="text-xs text-[#4B5563] leading-relaxed max-w-sm">
                 {lang === 'bn'
@@ -139,41 +136,44 @@ export const Footer: React.FC = () => {
               <h4 className="text-xs font-semibold uppercase tracking-normal text-[#111827]">
                 {lang === 'bn' ? 'প্রধান কার্যালয়' : 'Office Address'}
               </h4>
-              <div className="space-y-2.5 text-xs text-[#4B5563] leading-relaxed">
-                <div className="flex items-start gap-2.5">
-                  <FaLocationDot className="w-3.5 h-3.5 text-[#1E7C46] shrink-0 mt-0.5" />
+              <div className="space-y-3 text-xs text-[#4B5563] leading-relaxed">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-[#1E7C46] shrink-0 mt-0.5 stroke-[1.75]" />
                   <p>
                     27 Shaptak Square, Lift-11 (Level-11), Plot-2 (New), Road no-16, Old Dhanmondi 27, Dhanmondi, Dhaka-1209, Bangladesh
                   </p>
                 </div>
-                <div className="flex items-center gap-2.5 pt-0.5">
-                  <FaPhone className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
-                  <a href="tel:+8801325074535" className="hover:underline text-[#111827] font-mono">
+                <div className="flex items-center gap-3 pt-0.5">
+                  <Phone className="w-4 h-4 text-[#1E7C46] shrink-0 stroke-[1.75]" />
+                  <a href="tel:+8801325074535" className="hover:underline text-[#111827] font-semibold">
                     +880 1325 074 535
                   </a>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <FaWhatsapp className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
+                <div className="flex items-center gap-3">
+                  <svg className="w-4 h-4 text-[#1E7C46] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                  </svg>
                   <a
                     href="https://wa.me/8801325074535"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-[#1E7C46] font-mono"
+                    className="hover:underline text-[#1E7C46] font-semibold"
                   >
                     +880 1325 074 535
                   </a>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <FaEnvelope className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
+                <div className="flex items-center gap-3">
+                  <Mail className="w-4 h-4 text-[#1E7C46] shrink-0 stroke-[1.75]" />
                   <a
                     href="mailto:sunsetgroupbd@gmail.com"
-                    className="hover:underline text-[#111827] font-mono"
+                    className="hover:underline text-[#111827] font-medium"
                   >
                     sunsetgroupbd@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-2.5 text-[11px] text-[#6B7280] pt-1">
-                  <FaClock className="w-3.5 h-3.5 text-[#1E7C46] shrink-0" />
+                <div className="flex items-center gap-3 text-[11px] text-[#6B7280] pt-1">
+                  <Clock className="w-4 h-4 text-[#1E7C46] shrink-0 stroke-[1.75]" />
                   <span>
                     {lang === 'bn'
                       ? 'অফিস সময়: শনি - বৃহস্পতিবার, সকাল ১০:০০ - সন্ধ্যা ৭:০০ (রবিবার বন্ধ)'

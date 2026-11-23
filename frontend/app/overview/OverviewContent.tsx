@@ -1,14 +1,47 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const overviewSlides = [
+  {
+    src: '/Hotel & restaurant View.jpg.webp',
+    alt: 'Dhaka Fantasy Island - Eco Hotel & Restaurant Lakeside View',
+  },
+  {
+    src: '/dfiheroimage.webp',
+    alt: 'Dhaka Fantasy Island - Architectural Masterplan & Landscape',
+  },
+  {
+    src: '/Coffee Corner& Rest Room.jpg.webp',
+    alt: 'Dhaka Fantasy Island - Coffee Corner & Rest Pavilion',
+  },
+];
 
 export const OverviewContent: React.FC = () => {
   const { lang, t } = useLanguage();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % overviewSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + overviewSlides.length) % overviewSlides.length);
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % overviewSlides.length);
+  };
 
   return (
     <div className="py-12 sm:py-20">
@@ -29,22 +62,59 @@ export const OverviewContent: React.FC = () => {
         </p>
       </Container>
 
-      {/* Visual Presentation Area - Real Architectural Photograph */}
+      {/* Visual Presentation Area - 3-Image Sliding Showcase */}
       <Container className="mb-16">
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[#0A2617] border border-[#E5E7EB] shadow-md">
-          <Image
-            src="/Hotel & restaurant View.jpg.webp"
-            alt="Dhaka Fantasy Island - Eco Hotel & Restaurant Lakeside View"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-            <span className="font-medium">{t.projectIntro.badgeText}</span>
-            <span className="font-mono text-[#86EFAC] font-semibold">
-              ECO HOTEL &amp; RESORT • MOHAMMADPUR
-            </span>
+        <div className="relative aspect-[16/9] sm:aspect-[21/9] min-h-[300px] sm:min-h-[440px] w-full overflow-hidden rounded-2xl bg-[#0A2617] border border-[#E5E7EB] shadow-lg group">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={overviewSlides[currentSlide].src}
+                alt={overviewSlides[currentSlide].alt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Left Navigation Arrow */}
+          <button
+            onClick={handlePrev}
+            aria-label="Previous image"
+            className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-105 cursor-pointer z-10"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+          </button>
+
+          {/* Right Navigation Arrow */}
+          <button
+            onClick={handleNext}
+            aria-label="Next image"
+            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-105 cursor-pointer z-10"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          </button>
+
+          {/* Bottom Pagination Dots */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10 bg-black/35 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
+            {overviewSlides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-2 rounded-full transition-all cursor-pointer ${
+                  currentSlide === idx ? 'w-6 bg-[#86EFAC]' : 'w-2 bg-white/60 hover:bg-white'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </Container>
