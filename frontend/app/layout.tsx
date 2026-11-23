@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, Hind_Siliguri, Noto_Sans_Bengali } from 'next/font/google';
+import { Playfair_Display, Plus_Jakarta_Sans, Hind_Siliguri, Noto_Serif_Bengali } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/language-context';
 import { Header } from '@/components/layout/Header';
@@ -8,10 +8,17 @@ import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 import { SkipLink } from '@/components/layout/SkipLink';
 import { JsonLd } from '@/components/seo/JsonLd';
 
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
+const playfair = Playfair_Display({
+  weight: ['600', '700', '800'],
   subsets: ['latin'],
-  variable: '--font-poppins',
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-plus-jakarta',
   display: 'swap',
 });
 
@@ -22,10 +29,10 @@ const hindSiliguri = Hind_Siliguri({
   display: 'swap',
 });
 
-const notoSansBengali = Noto_Sans_Bengali({
+const notoSerifBengali = Noto_Serif_Bengali({
   weight: ['500', '600', '700'],
   subsets: ['bengali'],
-  variable: '--font-noto-sans-bengali',
+  variable: '--font-noto-serif-bengali',
   display: 'swap',
 });
 
@@ -125,7 +132,7 @@ export default function RootLayout({
     <html
       lang="bn"
       suppressHydrationWarning
-      className={`${poppins.variable} ${hindSiliguri.variable} ${notoSansBengali.variable} h-full`}
+      className={`${playfair.variable} ${plusJakarta.variable} ${hindSiliguri.variable} ${notoSerifBengali.variable} h-full`}
     >
       <head>
         <JsonLd />
