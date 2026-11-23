@@ -60,12 +60,12 @@ export const Header: React.FC = () => {
             : 'border-b border-[#E5E7EB]'
         }`}
       >
-        <Container className="flex items-center justify-between h-16 sm:h-20">
+        <Container size="wide" className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo on Left */}
           <Link
             href="/"
             aria-label="Dhaka Fantasy Island - Home"
-            className="flex items-center shrink-0 focus-visible:outline-none group min-w-0"
+            className="flex items-center shrink-0 focus-visible:outline-none group min-w-0 mr-2 xl:mr-4"
           >
             <DFILogo variant="header" className="group-hover:opacity-90 transition-opacity" />
           </Link>
@@ -73,7 +73,7 @@ export const Header: React.FC = () => {
           {/* Desktop Navigation in Center */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center space-x-1 xl:space-x-2 shrink-0"
+            className="hidden lg:flex items-center gap-1 xl:gap-2 shrink min-w-0"
           >
             {navLinks.map((link) => {
               const active = isCurrent(link.href);
@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[13.5px] px-3.5 py-2 rounded-xl transition-colors whitespace-nowrap font-medium ${
+                  className={`text-[13px] xl:text-[14px] px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-xl transition-colors whitespace-nowrap font-medium ${
                     active
                       ? 'text-[#1E7C46] font-semibold bg-[#F3F4F6]'
                       : 'text-[#4B5563] hover:text-[#1E7C46] hover:bg-[#F9FAFB]'
@@ -94,7 +94,7 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Right Action Elements: Language toggle + Enquire CTA */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3.5 shrink-0 ml-2 xl:ml-4">
             {/* Language Switcher */}
             <button
               onClick={toggleLang}
@@ -103,7 +103,7 @@ export const Header: React.FC = () => {
                   ? 'Switch language to English'
                   : 'বাংলায় রূপান্তর করুন'
               }
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-xl border border-[#E5E7EB] bg-white text-[#111827] hover:bg-[#F9FAFB] transition-colors cursor-pointer select-none shadow-xs"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-xl border border-[#E5E7EB] bg-white text-[#111827] hover:bg-[#F9FAFB] transition-colors cursor-pointer select-none shadow-xs"
             >
               <Globe className="w-3.5 h-3.5 text-[#1E7C46]" />
               <span className={lang === 'bn' ? 'font-bold text-[#1E7C46]' : 'text-[#6B7280]'}>
@@ -120,7 +120,7 @@ export const Header: React.FC = () => {
               href="/contact"
               variant="primary"
               size="sm"
-              className="text-xs font-semibold px-4 py-2 rounded-xl"
+              className="text-xs font-semibold px-4 py-2 rounded-xl shrink-0"
             >
               {t.common.enquireNow}
             </Button>

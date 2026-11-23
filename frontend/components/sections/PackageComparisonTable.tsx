@@ -13,7 +13,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
   packages,
   onSelectForInquiry,
 }) => {
-  const { lang, t } = useLanguage();
+  const { lang, t, formatNumber } = useLanguage();
 
   return (
     <div className="w-full overflow-x-auto border border-[#E5E7EB] bg-white rounded-[4px]">
@@ -73,7 +73,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center">
-                {pkg.landArea} sft
+                {formatNumber(pkg.landArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
               </td>
             ))}
           </tr>
@@ -85,7 +85,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center">
-                {pkg.buildArea} sft
+                {formatNumber(pkg.buildArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
               </td>
             ))}
           </tr>
@@ -97,7 +97,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center text-[#1E7C46]">
-                {pkg.totalArea} sft
+                {formatNumber(pkg.totalArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
               </td>
             ))}
           </tr>
@@ -109,7 +109,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center font-bold text-[#111827]">
-                {pkg.accommodationDays} {t.packages.daysUnit}
+                {formatNumber(pkg.accommodationDays)} {t.packages.daysUnit}
                 {pkg.isPlatinum && '*'}
               </td>
             ))}
@@ -122,7 +122,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center font-medium">
-                {pkg.restaurantDiscount}%
+                {formatNumber(pkg.restaurantDiscount)}%
               </td>
             ))}
           </tr>
@@ -134,7 +134,7 @@ export const PackageComparisonTable: React.FC<PackageComparisonTableProps> = ({
             </td>
             {packages.map((pkg) => (
               <td key={pkg.id} className="p-4 text-center font-medium">
-                {pkg.extraDaysDiscount}%
+                {formatNumber(pkg.extraDaysDiscount)}%
               </td>
             ))}
           </tr>

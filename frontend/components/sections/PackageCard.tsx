@@ -18,7 +18,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
   onOpenDetails,
   onSelectForInquiry,
 }) => {
-  const { lang } = useLanguage();
+  const { lang, formatNumber } = useLanguage();
 
   return (
     <div
@@ -71,21 +71,21 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'জমি:' : 'Land:'}</span>
             <span className="font-semibold text-[#111827]">
-              {pkg.landArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
+              {formatNumber(pkg.landArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'নির্মাণ:' : 'Build:'}</span>
             <span className="font-semibold text-[#111827]">
-              {pkg.buildArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
+              {formatNumber(pkg.buildArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
           <div className="flex justify-between items-center px-2 py-1 sm:px-3 sm:py-2 bg-[#F9FAFB] rounded-lg sm:rounded-xl border border-[#E5E7EB]/70">
             <span className="font-semibold text-[#111827]">{lang === 'bn' ? 'মোট:' : 'Total:'}</span>
             <span className="font-bold text-[#1E7C46] text-xs sm:text-sm">
-              {pkg.totalArea} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
+              {formatNumber(pkg.totalArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
@@ -93,7 +93,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'থাকা:' : 'Stay:'}</span>
             <span className="font-bold text-[#111827]">
-              {pkg.accommodationDays} {lang === 'bn' ? 'দিন' : 'days'}
+              {formatNumber(pkg.accommodationDays)} {lang === 'bn' ? 'দিন' : 'days'}
             </span>
           </div>
 
@@ -101,7 +101,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
           <div className="flex justify-between items-center py-0.5 sm:py-1">
             <span className="text-[#6B7280]">{lang === 'bn' ? 'ছাড়:' : 'Discount:'}</span>
             <span className="font-bold text-[#1E7C46]">
-              {pkg.restaurantDiscount}%
+              {formatNumber(pkg.restaurantDiscount)}%
             </span>
           </div>
         </div>

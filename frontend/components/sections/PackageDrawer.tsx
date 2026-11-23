@@ -20,7 +20,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
   onClose,
   onSelectForInquiry,
 }) => {
-  const { lang, t } = useLanguage();
+  const { lang, t, formatNumber } = useLanguage();
 
   if (!pkg) return null;
 
@@ -98,7 +98,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                       {lang === 'bn' ? 'জমি' : 'Land'}
                     </span>
                     <span className="text-base font-bold text-[#111827] tabular-nums">
-                      {pkg.landArea} sft
+                      {formatNumber(pkg.landArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
                     </span>
                   </div>
                   <div className="p-3 bg-[#F9FAFB] border border-[#E5E7EB] rounded-[3px]">
@@ -106,7 +106,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                       {lang === 'bn' ? 'নির্মাণ' : 'Build'}
                     </span>
                     <span className="text-base font-bold text-[#111827] tabular-nums">
-                      {pkg.buildArea} sft
+                      {formatNumber(pkg.buildArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
                     </span>
                   </div>
                   <div className="p-3 bg-[#E0F2FE] border border-[#BAE6FD] rounded-[3px]">
@@ -114,13 +114,13 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                       {lang === 'bn' ? 'মোট অনুপাত' : 'Total'}
                     </span>
                     <span className="text-base font-bold text-[#0369A1] tabular-nums">
-                      {pkg.totalArea} sft
+                      {formatNumber(pkg.totalArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
                     </span>
                   </div>
                 </div>
                 <p className="text-xs text-[#6B7280] italic">
                   {lang === 'bn'
-                    ? `ভূমি ${pkg.landArea} বর্গফুট + নির্মাণ ${pkg.buildArea} বর্গফুট = মোট ${pkg.totalArea} বর্গফুট অংশীদারিত্ব।`
+                    ? `ভূমি ${formatNumber(pkg.landArea)} বর্গফুট + নির্মাণ ${formatNumber(pkg.buildArea)} বর্গফুট = মোট ${formatNumber(pkg.totalArea)} বর্গফুট অংশীদারিত্ব।`
                     : `Land ${pkg.landArea} sft + Build ${pkg.buildArea} sft = Total ${pkg.totalArea} sft deeded proportion.`}
                 </p>
               </div>
@@ -137,7 +137,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                   </span>
                   <div className="text-right">
                     <span className="text-lg font-bold text-[#1E7C46]">
-                      {pkg.accommodationDays} {t.packages.daysUnit}
+                      {formatNumber(pkg.accommodationDays)} {t.packages.daysUnit}
                     </span>
                     {pkg.accommodationDaysNote && (
                       <span className="block text-[10px] text-[#D97706] font-medium">
@@ -162,7 +162,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                     <Check className="w-4 h-4 text-[#1E7C46]" />
                     <span>
                       {lang === 'bn'
-                        ? `রেস্টুরেন্ট বিলের উপর ${pkg.restaurantDiscount}% ছাড়`
+                        ? `রেস্টুরেন্ট বিলের উপর ${formatNumber(pkg.restaurantDiscount)}% ছাড়`
                         : `${pkg.restaurantDiscount}% discount on resort dining`}
                     </span>
                   </li>
@@ -170,7 +170,7 @@ export const PackageDrawer: React.FC<PackageDrawerProps> = ({
                     <Check className="w-4 h-4 text-[#1E7C46]" />
                     <span>
                       {lang === 'bn'
-                        ? `অতিরিক্ত রুম বুকিংয়ের উপর ${pkg.extraDaysDiscount}% ছাড়`
+                        ? `অতিরিক্ত রুম বুকিংয়ের উপর ${formatNumber(pkg.extraDaysDiscount)}% ছাড়`
                         : `${pkg.extraDaysDiscount}% discount on additional stay days`}
                     </span>
                   </li>

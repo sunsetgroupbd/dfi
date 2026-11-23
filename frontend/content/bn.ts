@@ -28,11 +28,11 @@ export const bn = {
   },
 
   nav: {
-    overview: 'প্রকল্প পরিচিতি',
+    overview: 'পরিচিতি',
     packages: 'প্যাকেজসমূহ',
-    ownership: 'মালিকানা প্রক্রিয়া',
-    whyInvest: 'বিনিয়োগের গুরুত্ব',
-    location: 'লোকেশন ও যোগাযোগ',
+    ownership: 'মালিকানা',
+    whyInvest: 'কেন বিনিয়োগ',
+    location: 'অবস্থান',
     gallery: 'গ্যালারি',
     contact: 'যোগাযোগ',
   },
