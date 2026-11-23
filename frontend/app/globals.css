@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --font-playfair: var(--font-playfair), Georgia, 'Times New Roman', serif;
-  --font-plus-jakarta: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-hind: var(--font-hind-siliguri), sans-serif;
-  --font-noto-serif-bengali: var(--font-noto-serif-bengali), serif;
+@theme {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-poppins: var(--font-plus-jakarta), sans-serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-bengali-serif: var(--font-noto-serif-bengali), serif;
+}
+
+:root {
+  /* Font Family Tokens */
+  --font-serif-token: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-sans-token: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hind-token: var(--font-hind-siliguri), sans-serif;
+  --font-bengali-serif-token: var(--font-noto-serif-bengali), serif;
 
   /* Premium White & Ash Corporate Palette with Deep Forest Green accents */
   --color-forest: #0D2F1D;
@@ -52,7 +60,7 @@
   body {
     background-color: #FFFFFF;
     color: #111827;
-    font-family: var(--font-plus-jakarta), sans-serif;
+    font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 0;
     letter-spacing: normal !important;
@@ -62,37 +70,43 @@
   }
 
   /* Headings: Ultra-Luxury Playfair Display serif for English */
-  h1, h2, h3 {
-    font-family: var(--font-playfair), Georgia, serif;
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
     letter-spacing: -0.01em;
     font-weight: 700;
   }
 
   h4, h5, h6 {
-    font-family: var(--font-plus-jakarta), sans-serif;
+    font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: normal !important;
     font-weight: 600;
   }
 
   /* Bengali typography: Hind Siliguri for body, prestigious Noto Serif Bengali for major headings */
-  [lang="bn"],
-  [lang="bn"] * {
-    font-family: var(--font-hind), sans-serif;
+  html[lang="bn"],
+  [lang="bn"] {
+    font-family: var(--font-hind-siliguri), sans-serif;
     letter-spacing: normal !important;
   }
 
+  html[lang="bn"] h1,
+  html[lang="bn"] h2,
+  html[lang="bn"] h3,
   [lang="bn"] h1,
   [lang="bn"] h2,
   [lang="bn"] h3 {
-    font-family: var(--font-noto-serif-bengali), var(--font-hind), serif;
+    font-family: var(--font-noto-serif-bengali), var(--font-hind-siliguri), serif;
     letter-spacing: normal !important;
     font-weight: 700;
   }
 
+  html[lang="bn"] h4,
+  html[lang="bn"] h5,
+  html[lang="bn"] h6,
   [lang="bn"] h4,
   [lang="bn"] h5,
   [lang="bn"] h6 {
-    font-family: var(--font-hind), sans-serif;
+    font-family: var(--font-hind-siliguri), sans-serif;
     letter-spacing: normal !important;
     font-weight: 600;
   }
@@ -106,6 +120,26 @@
     outline: 2px solid #1E7C46;
     outline-offset: 2px;
   }
+}
+
+/* Explicit font utilities */
+.font-playfair,
+.font-serif {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif !important;
+}
+
+.font-plus-jakarta,
+.font-sans,
+.font-poppins {
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.font-bengali-serif {
+  font-family: var(--font-noto-serif-bengali), serif !important;
+}
+
+.font-hind {
+  font-family: var(--font-hind-siliguri), sans-serif !important;
 }
 
 /* Tabular numerals for stats and prices */
