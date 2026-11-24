@@ -19,8 +19,8 @@ export const FinalCtaSection: React.FC = () => {
             {/* Background Resort Image with Overlay */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/dfi-aerial.webp"
-                alt="Dhaka Fantasy Island - Aerial Masterplan View"
+                src="/realdfiview.webp"
+                alt="Dhaka Fantasy Island - Aerial Resort View"
                 fill
                 sizes="100vw"
                 className="object-cover object-center opacity-65"
