@@ -6,13 +6,13 @@ import { Container } from '@/components/ui/Container';
 import { CardShapePattern } from '@/components/svg/CardShapePattern';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 import { 
-  Receipt, 
   FileSignature, 
   Award, 
   ShieldCheck, 
   Laptop, 
   CheckCircle2 
 } from 'lucide-react';
+import { TbCurrencyTaka } from 'react-icons/tb';
 
 export const OwnershipSection: React.FC = () => {
   const { lang } = useLanguage();
@@ -28,7 +28,7 @@ export const OwnershipSection: React.FC = () => {
       descEn: 'Upon deposit of booking funds to Sunset Group designated corporate account, an official money receipt with unique shareholder ID is issued.',
       deliverableBn: 'মানি রিসিট ও শেয়ারহোল্ডার আইডি',
       deliverableEn: 'Money Receipt & Shareholder ID',
-      icon: Receipt,
+      icon: TbCurrencyTaka,
       pattern: 'arch' as const,
     },
     {
