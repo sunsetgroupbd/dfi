@@ -10,6 +10,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const overviewSlides = [
   {
+    src: '/realdfiview.webp',
+    alt: 'Dhaka Fantasy Island - Real Site & Resort Panoramic View',
+  },
+  {
     src: '/Hotel & restaurant View.jpg.webp',
     alt: 'Dhaka Fantasy Island - Eco Hotel & Restaurant Lakeside View',
   },
