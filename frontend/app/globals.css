@@ -4,7 +4,7 @@
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-poppins: var(--font-plus-jakarta), sans-serif;
-  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-heading: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-bengali-serif: var(--font-noto-serif-bengali), serif;
 }
 
@@ -69,10 +69,10 @@
     max-width: 100vw;
   }
 
-  /* Headings: Ultra-Luxury Playfair Display serif for English */
+  /* Headings: Clean Modern Geometric Sans-Serif (MRstudio style) */
   h1, h2, h3, .font-heading {
-    font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
-    letter-spacing: -0.01em;
+    font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.02em;
     font-weight: 700;
   }
 
@@ -82,11 +82,12 @@
     font-weight: 600;
   }
 
-  /* Bengali typography: Hind Siliguri for body, prestigious Noto Serif Bengali for major headings */
+  /* Bengali typography: Prestigious Noto Serif Bengali for major headings, elegant Hind Siliguri for body and UI */
   html[lang="bn"],
   [lang="bn"] {
-    font-family: var(--font-hind-siliguri), sans-serif;
+    font-family: var(--font-hind-siliguri), var(--font-plus-jakarta), -apple-system, sans-serif;
     letter-spacing: normal !important;
+    line-height: 1.6;
   }
 
   html[lang="bn"] h1,
@@ -97,6 +98,7 @@
   [lang="bn"] h3 {
     font-family: var(--font-noto-serif-bengali), var(--font-hind-siliguri), serif;
     letter-spacing: normal !important;
+    line-height: 1.35;
     font-weight: 700;
   }
 
@@ -106,8 +108,9 @@
   [lang="bn"] h4,
   [lang="bn"] h5,
   [lang="bn"] h6 {
-    font-family: var(--font-hind-siliguri), sans-serif;
+    font-family: var(--font-hind-siliguri), var(--font-plus-jakarta), sans-serif;
     letter-spacing: normal !important;
+    line-height: 1.45;
     font-weight: 600;
   }
 

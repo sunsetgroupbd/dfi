@@ -3,7 +3,6 @@
 import React from 'react';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/ui/Container';
-import { CardShapePattern } from '@/components/svg/CardShapePattern';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 import { 
   FileSignature, 
@@ -29,7 +28,6 @@ export const OwnershipSection: React.FC = () => {
       deliverableBn: 'মানি রিসিট ও শেয়ারহোল্ডার আইডি',
       deliverableEn: 'Money Receipt & Shareholder ID',
       icon: TbCurrencyTaka,
-      pattern: 'arch' as const,
     },
     {
       number: '2',
@@ -42,7 +40,6 @@ export const OwnershipSection: React.FC = () => {
       deliverableBn: 'স্ট্যাম্পযুক্ত আইনি চুক্তিপত্র',
       deliverableEn: 'Executed Statutory Agreement',
       icon: FileSignature,
-      pattern: 'wave' as const,
     },
     {
       number: '3',
@@ -55,75 +52,66 @@ export const OwnershipSection: React.FC = () => {
       deliverableBn: 'সরকারি সাফ-কবলা মালিকানা দলিল',
       deliverableEn: 'Deeded Freehold Saf-Kabala Title',
       icon: Award,
-      pattern: 'crest' as const,
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0A2617] text-white border-b border-[#18422A] relative overflow-hidden">
-      {/* Background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#1E7C46]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#165B33]/20 rounded-full blur-3xl pointer-events-none" />
-
-      <Container className="relative z-10">
+    <section className="py-14 sm:py-20 bg-white text-[#111827] border-b border-[#E5E7EB]">
+      <Container size="wide">
         {/* Section Heading */}
-        <FadeIn direction="up" className="max-w-2xl mb-12 sm:mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#86EFAC]">
+        <FadeIn direction="up" className="max-w-2xl mb-10 sm:mb-12">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#1E7C46]">
             {lang === 'bn' ? 'মালিকানা প্রক্রিয়া' : 'OWNERSHIP PROCESS'}
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-normal mt-1.5 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0D2F1D] tracking-tight mt-1 leading-tight">
             {lang === 'bn'
               ? 'সহজ। নিরাপদ। শরীয়াহ সম্মত।'
               : 'Simple. Secure. Shariah Compliant.'}
           </h2>
-          <p className="text-xs sm:text-sm text-[#CBD5E1] mt-2.5 leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#6B7280] mt-2 leading-relaxed">
             {lang === 'bn'
               ? 'আইনগত কাঠামোর অধীনে বুকিং থেকে সাফ-কবলা দলিল রেজিস্ট্রি পর্যন্ত প্রতিটি ধাপ সুনির্দিষ্ট, স্বচ্ছ ও নিরাপদ।'
               : 'A transparent step-by-step statutory process from initial booking to deed execution.'}
           </p>
         </FadeIn>
 
-        {/* 3 Step Cards Grid - Full Width & Balanced */}
+        {/* 3 Step Cards Grid */}
         <StaggerContainer staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-8 sm:mb-10">
           {steps.map((step) => {
             const Icon = step.icon;
             return (
               <StaggerItem key={step.number} className="h-full">
-                <div className="h-full relative overflow-hidden bg-[#0D2E1C]/90 hover:bg-[#103722] border border-[#1E5C38] hover:border-[#4ADE80]/50 p-6 sm:p-7 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg group">
-                  <CardShapePattern
-                    variant={step.pattern}
-                    color="#86EFAC"
-                    className="w-24 h-24 sm:w-32 sm:h-32 opacity-15"
-                  />
-
-                  <div className="relative z-10">
+                <div className="h-full relative overflow-hidden bg-[#F9FAFB] hover:bg-white border border-[#E5E7EB] hover:border-[#1E7C46] p-6 sm:p-7 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xs hover:shadow-lg group">
+                  <div>
                     {/* Top Row: Number badge + Step Phase Tag */}
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-10 h-10 rounded-xl bg-[#86EFAC] text-[#0A2617] font-bold text-base flex items-center justify-center shadow-md font-sans">
+                      <div className="w-10 h-10 rounded-xl bg-[#E8F5E9] text-[#1E7C46] font-bold text-base flex items-center justify-center shadow-xs font-sans">
                         {step.number}
                       </div>
-                      <span className="text-[11px] uppercase font-bold tracking-wider text-[#86EFAC] bg-[#164E2E] border border-[#86EFAC]/25 px-3 py-1 rounded-full">
+                      <span className="text-[11px] uppercase font-bold tracking-wider text-[#1E7C46] bg-white border border-[#E5E7EB] px-3 py-1 rounded-full shadow-2xs">
                         {lang === 'bn' ? step.stepLabelBn : step.stepLabelEn}
                       </span>
                     </div>
 
                     {/* Step Title & Icon */}
-                    <div className="flex items-start gap-2.5 mb-2.5">
-                      <Icon className="w-5 h-5 text-[#86EFAC] shrink-0 mt-0.5" />
-                      <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                    <div className="flex items-center gap-2.5 mb-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center shrink-0 text-[#1E7C46]">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-[#111827] leading-snug">
                         {lang === 'bn' ? step.titleBn : step.titleEn}
                       </h3>
                     </div>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-[13px] text-[#CBD5E1] leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed mt-2">
                       {lang === 'bn' ? step.descBn : step.descEn}
                     </p>
                   </div>
 
                   {/* Bottom Deliverable Badge */}
-                  <div className="relative z-10 mt-6 pt-4 border-t border-[#1E5C38]/80 flex items-center gap-2 text-xs font-semibold text-[#86EFAC]">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 text-[#86EFAC]" />
+                  <div className="mt-6 pt-4 border-t border-[#E5E7EB] flex items-center gap-2 text-xs font-semibold text-[#1E7C46]">
+                    <CheckCircle2 className="w-4 h-4 shrink-0" />
                     <span className="truncate">
                       {lang === 'bn' ? step.deliverableBn : step.deliverableEn}
                     </span>
@@ -134,19 +122,19 @@ export const OwnershipSection: React.FC = () => {
           })}
         </StaggerContainer>
 
-        {/* Bottom Institutional Reassurance Strip (Exit Policy & ERP Software) */}
+        {/* Bottom Reassurance Strip (Exit Policy & ERP Software) */}
         <FadeIn direction="up" delay={0.2}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Exit Policy Card */}
-            <div className="p-5 sm:p-6 bg-[#0D2E1C]/60 border border-[#1E5C38] rounded-2xl flex items-start gap-4 shadow-sm hover:border-[#4ADE80]/30 transition-colors">
-              <div className="w-10 h-10 rounded-xl bg-[#164E2E] border border-[#86EFAC]/20 flex items-center justify-center shrink-0 text-[#86EFAC]">
+            <div className="p-5 sm:p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl flex items-start gap-4 shadow-2xs hover:border-[#1E7C46]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#E8F5E9] border border-[#C8E6C9] flex items-center justify-center shrink-0 text-[#1E7C46]">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-bold text-white tracking-normal">
+                <h4 className="text-sm font-bold text-[#111827] tracking-tight">
                   {lang === 'bn' ? 'হস্তান্তর ও বিক্রয় নীতিমালা (Exit Policy)' : 'Exit & Transfer Policy'}
                 </h4>
-                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                <p className="text-xs text-[#6B7280] leading-relaxed">
                   {lang === 'bn'
                     ? 'সাফ-কবলা দলিল রেজিস্ট্রেশনের পর শেয়ারহোল্ডার অর্জিত শেয়ার বা জমি সম্পূর্ণ আইনি অধিকারে অবাধে বিক্রয়, হস্তান্তর বা উত্তরাধিকারীদের মাঝে বণ্টন করতে পারবেন।'
                     : 'Following registered title handover, shareholders retain full statutory authority to transfer, sell, or bequeath deeded holdings.'}
@@ -155,18 +143,18 @@ export const OwnershipSection: React.FC = () => {
             </div>
 
             {/* ERP Software Card */}
-            <div className="p-5 sm:p-6 bg-[#0D2E1C]/60 border border-[#1E5C38] rounded-2xl flex items-start gap-4 shadow-sm hover:border-[#4ADE80]/30 transition-colors">
-              <div className="w-10 h-10 rounded-xl bg-[#164E2E] border border-[#86EFAC]/20 flex items-center justify-center shrink-0 text-[#86EFAC]">
+            <div className="p-5 sm:p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl flex items-start gap-4 shadow-2xs hover:border-[#1E7C46]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#E8F5E9] border border-[#C8E6C9] flex items-center justify-center shrink-0 text-[#1E7C46]">
                 <Laptop className="w-5 h-5" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-bold text-white tracking-normal">
-                  {lang === 'bn' ? 'ইআরপি সফটওয়্যার পর্যবেক্ষণ (ERP Updates)' : 'ERP Investor Tracking Portal'}
+                <h4 className="text-sm font-bold text-[#111827] tracking-tight">
+                  {lang === 'bn' ? 'রিসোর্ট ইআরপি সফটওয়্যার নজরদারি' : 'Cloud ERP Management'}
                 </h4>
-                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                <p className="text-xs text-[#6B7280] leading-relaxed">
                   {lang === 'bn'
-                    ? 'বিনিয়োগকারীগণ নিজস্ব ডিজিটাল আইডি দিয়ে ইআরপি সফটওয়্যারে লগইন করে প্রকল্পের বাস্তব অগ্রগতি, হিসাব-নিকাশ ও অডিট রিপোর্ট সার্বক্ষণিক পর্যবেক্ষণ করতে পারবেন।'
-                    : 'Investors access real-time construction milestones, financial audits, and governance statements through the dedicated ERP portal.'}
+                    ? 'প্রতিটি শেয়ারহোল্ডারের জন্য থাকছে ডেডিকেটেড অনলাইন পোর্টাল, যার মাধ্যমে দৈনিক রুম বুকিং, আয়-ব্যয় এবং মুনাফা সরাসরি লাইভ ট্র্যাক করা যাবে।'
+                    : 'A dedicated investor portal offering transparent live tracking of room occupancy, revenues, and quarterly halal dividends.'}
                 </p>
               </div>
             </div>

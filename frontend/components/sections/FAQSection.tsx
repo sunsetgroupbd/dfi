@@ -9,16 +9,16 @@ export const FAQSection: React.FC = () => {
   const { lang, t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-24 bg-[#F9FAFB] border-b border-[#E5E7EB]">
-      <Container>
+    <section className="py-14 sm:py-20 bg-white border-b border-[#E5E7EB]">
+      <Container size="wide">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-          <span className="text-[11px] font-semibold uppercase tracking-normal text-[#6B7280]">
-            {lang === 'bn' ? 'সাধারণ প্রশ্নাবলী' : 'FAQ'}
+          <span className="text-xs font-bold uppercase tracking-wider text-[#1E7C46]">
+            {lang === 'bn' ? 'সাধারণ প্রশ্নাবলী' : 'FREQUENTLY ASKED QUESTIONS'}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal mt-1">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0D2F1D] tracking-tight mt-1">
             {t.faq.title}
           </h2>
-          <p className="text-xs sm:text-sm text-[#4B5563] mt-2">
+          <p className="text-xs sm:text-sm text-[#6B7280] mt-2">
             {t.faq.subtitle}
           </p>
         </div>

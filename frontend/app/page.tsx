@@ -7,6 +7,7 @@ import { VideoShowcaseSection } from '@/components/sections/VideoShowcaseSection
 import { LocationSection } from '@/components/sections/LocationSection';
 import { ParentGroupSection } from '@/components/sections/ParentGroupSection';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { KeyFactsSection } from '@/components/sections/KeyFactsSection';
 import { FinalCtaSection } from '@/components/sections/FinalCtaSection';
 
 export default function HomePage() {
@@ -36,7 +37,10 @@ export default function HomePage() {
       {/* 8. Frequently Asked Questions */}
       <FAQSection />
 
-      {/* 9. Final Call to Action Banner */}
+      {/* 9. Trusted by Investors Strip (MRstudio style) */}
+      <KeyFactsSection />
+
+      {/* 10. Final Call to Action Banner */}
       <FinalCtaSection />
     </>
   );

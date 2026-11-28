@@ -120,7 +120,7 @@ export const Header: React.FC = () => {
               href="/contact"
               variant="primary"
               size="sm"
-              className="text-xs font-semibold px-4 py-2 rounded-xl shrink-0"
+              className="text-xs font-semibold px-5 py-2.5 rounded-full bg-[#1E7C46] hover:bg-[#166438] text-white shadow-xs shrink-0 cursor-pointer"
             >
               {t.common.enquireNow}
             </Button>

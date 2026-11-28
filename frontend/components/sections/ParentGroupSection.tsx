@@ -11,8 +11,8 @@ export const ParentGroupSection: React.FC = () => {
   const { lang, t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 bg-white border-b border-[#E5E7EB]">
-      <Container>
+    <section className="py-14 sm:py-20 bg-white border-b border-[#E5E7EB]">
+      <Container size="wide">
         <div className="relative overflow-hidden bg-[#F9FAFB] border border-[#E5E7EB] p-7 sm:p-10 rounded-2xl shadow-sm">
           <CardShapePattern variant="rings" color="#1E7C46" className="w-48 h-48 opacity-30" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

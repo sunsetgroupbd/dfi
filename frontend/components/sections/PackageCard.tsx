@@ -4,7 +4,6 @@ import React from 'react';
 import { PackageItem } from '@/lib/types';
 import { useLanguage } from '@/lib/language-context';
 import { Button } from '@/components/ui/Button';
-import { CardShapePattern } from '@/components/svg/CardShapePattern';
 import { ArrowRight } from 'lucide-react';
 
 interface PackageCardProps {
@@ -22,84 +21,73 @@ export const PackageCard: React.FC<PackageCardProps> = ({
 
   return (
     <div
-      className={`relative overflow-hidden bg-white border p-3.5 sm:p-7 flex flex-col justify-between rounded-xl sm:rounded-2xl transition-all duration-200 shadow-sm hover:shadow-lg ${pkg.isPlatinum
-          ? 'border-[#1E7C46] ring-2 ring-[#1E7C46]/20 bg-gradient-to-b from-[#F0FDF4]/50 to-white'
+      className={`relative overflow-hidden bg-white border rounded-2xl transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1.5 p-5 sm:p-6 ${
+        pkg.isPlatinum
+          ? 'border-[#1E7C46] ring-2 ring-[#1E7C46]/20 bg-gradient-to-b from-[#F0FDF4]/40 to-white'
           : 'border-[#E5E7EB] hover:border-[#1E7C46]'
-        }`}
+      }`}
     >
-      {/* Decorative App Card Watermark SVG Solid Half-Shape */}
-      <CardShapePattern
-        variant={pkg.isPlatinum ? 'rings' : 'circle'}
-        color={pkg.isPlatinum ? '#DCFCE7' : '#E5E7EB'}
-        className="w-24 h-24 sm:w-40 sm:h-40 opacity-80"
-      />
-
-      {/* Top Best Value Badge for Platinum */}
-      {pkg.isPlatinum && (
-        <div className="absolute -top-0 right-3 sm:right-6">
-          <span className="inline-block px-2 sm:px-3.5 py-0.5 sm:py-1 bg-[#1E7C46] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-normal rounded-b-lg shadow-sm">
-            {lang === 'bn' ? 'সেরা মান' : 'BEST VALUE'}
-          </span>
-        </div>
-      )}
-
-      <div className="relative z-10">
-        {/* Package Header */}
-        <div className="pb-2.5 sm:pb-4 border-b border-[#F3F4F6]">
-          <div className="inline-block px-2 py-0.5 rounded-md bg-[#F3F4F6] text-[#4B5563] text-[10px] sm:text-[11px] font-bold uppercase tracking-normal mb-1.5 sm:mb-2">
+      <div>
+        {/* Package Header: Title, Price, Booking */}
+        <div className="pb-4 border-b border-[#F3F4F6]">
+          <h3 className="font-bold text-base sm:text-lg text-[#111827] tracking-tight leading-snug">
             {lang === 'bn' ? pkg.nameBn : pkg.name}
-          </div>
-          {/* Price */}
-          <div className="mt-0.5 sm:mt-1">
-            <span className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-[#111827] tracking-tight leading-tight block">
+          </h3>
+
+          <div className="mt-1.5 flex items-baseline gap-1">
+            <span className="text-lg sm:text-xl font-bold text-[#0D2F1D] tracking-tight">
               {lang === 'bn' ? pkg.priceFormattedBn : pkg.priceFormatted}
             </span>
-          </div>
-        </div>
-
-        {/* Breakdown specs list in an app-like container */}
-        <div className="py-2.5 sm:py-4 space-y-1.5 sm:space-y-2.5 text-[11px] sm:text-xs text-[#4B5563]">
-          {/* Booking */}
-          <div className="flex justify-between items-center py-0.5 sm:py-1">
-            <span className="text-[#6B7280]">{lang === 'bn' ? 'বুকিং:' : 'Booking:'}</span>
-            <span className="font-bold text-[#111827]">
-              {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
+            <span className="text-[11px] text-[#6B7280]">
+              {lang === 'bn' ? '/ শেয়ার' : '/ share'}
             </span>
           </div>
 
+          <div className="text-xs text-[#4B5563] mt-1">
+            <span className="text-[#6B7280]">{lang === 'bn' ? 'বুকিং মানি: ' : 'Booking: '}</span>
+            <strong className="text-[#111827]">
+              {lang === 'bn' ? pkg.bookingFormattedBn : pkg.bookingFormatted}
+            </strong>
+          </div>
+        </div>
+
+        {/* Breakdown Specs */}
+        <div className="py-4 space-y-2 text-xs text-[#4B5563]">
           {/* Area Formula: Land + Build = Total */}
-          <div className="flex justify-between items-center py-0.5 sm:py-1">
-            <span className="text-[#6B7280]">{lang === 'bn' ? 'জমি:' : 'Land:'}</span>
+          <div className="flex justify-between items-center">
+            <span className="text-[#6B7280]">{lang === 'bn' ? 'জমি হিস্যা:' : 'Land Share:'}</span>
             <span className="font-semibold text-[#111827]">
               {formatNumber(pkg.landArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
-          <div className="flex justify-between items-center py-0.5 sm:py-1">
-            <span className="text-[#6B7280]">{lang === 'bn' ? 'নির্মাণ:' : 'Build:'}</span>
+          <div className="flex justify-between items-center">
+            <span className="text-[#6B7280]">{lang === 'bn' ? 'নির্মাণ হিস্যা:' : 'Build Area:'}</span>
             <span className="font-semibold text-[#111827]">
               {formatNumber(pkg.buildArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
-          <div className="flex justify-between items-center px-2 py-1 sm:px-3 sm:py-2 bg-[#F9FAFB] rounded-lg sm:rounded-xl border border-[#E5E7EB]/70">
-            <span className="font-semibold text-[#111827]">{lang === 'bn' ? 'মোট:' : 'Total:'}</span>
-            <span className="font-bold text-[#1E7C46] text-xs sm:text-sm">
+          <div className="flex justify-between items-center px-3 py-1.5 bg-[#F4FBF6] rounded-xl border border-[#D1E7DD]">
+            <span className="font-semibold text-[#111827]">
+              {lang === 'bn' ? 'মোট অনুপাত:' : 'Total Area:'}
+            </span>
+            <span className="font-bold text-[#1E7C46] text-sm">
               {formatNumber(pkg.totalArea)} {lang === 'bn' ? 'বর্গফুট' : 'sft'}
             </span>
           </div>
 
           {/* Accommodation Days */}
-          <div className="flex justify-between items-center py-0.5 sm:py-1">
-            <span className="text-[#6B7280]">{lang === 'bn' ? 'থাকা:' : 'Stay:'}</span>
+          <div className="flex justify-between items-center pt-1">
+            <span className="text-[#6B7280]">{lang === 'bn' ? 'ফ্রি অবকাশ:' : 'Free Stay:'}</span>
             <span className="font-bold text-[#111827]">
-              {formatNumber(pkg.accommodationDays)} {lang === 'bn' ? 'দিন' : 'days'}
+              {formatNumber(pkg.accommodationDays)} {lang === 'bn' ? 'দিন / বছর' : 'days / yr'}
             </span>
           </div>
 
-          {/* Restaurant & Extra Days Discount */}
-          <div className="flex justify-between items-center py-0.5 sm:py-1">
-            <span className="text-[#6B7280]">{lang === 'bn' ? 'ছাড়:' : 'Discount:'}</span>
+          {/* Restaurant Discount */}
+          <div className="flex justify-between items-center">
+            <span className="text-[#6B7280]">{lang === 'bn' ? 'রেস্তোরাঁ ছাড়:' : 'Discount:'}</span>
             <span className="font-bold text-[#1E7C46]">
               {formatNumber(pkg.restaurantDiscount)}%
             </span>
@@ -107,23 +95,23 @@ export const PackageCard: React.FC<PackageCardProps> = ({
         </div>
       </div>
 
-      {/* Enquire CTA Button */}
-      <div className="relative z-10 pt-2 space-y-1.5 sm:space-y-2">
+      {/* Action Buttons */}
+      <div className="pt-2 space-y-2">
         <Button
           variant="primary"
           size="sm"
-          className="w-full text-center bg-[#1E7C46] text-white hover:bg-[#176337] rounded-lg sm:rounded-xl py-2 sm:py-2.5 text-xs sm:text-sm font-semibold shadow-xs"
+          className="w-full text-center bg-[#1E7C46] text-white hover:bg-[#166438] rounded-xl py-2.5 text-xs sm:text-sm font-semibold shadow-xs cursor-pointer"
           onClick={() => onSelectForInquiry(pkg.id)}
         >
-          {lang === 'bn' ? 'অনুসন্ধান' : 'Enquire'}
+          {lang === 'bn' ? 'অংশীদারিত্ব নিশ্চিত করুন' : 'Book Share'}
         </Button>
 
         <button
           onClick={() => onOpenDetails(pkg)}
-          className="w-full text-center text-[10px] sm:text-[11px] text-[#6B7280] hover:text-[#1E7C46] font-medium transition-colors cursor-pointer flex items-center justify-center gap-1"
+          className="w-full text-center text-xs text-[#6B7280] hover:text-[#1E7C46] font-medium transition-colors cursor-pointer flex items-center justify-center gap-1 py-1"
         >
-          <span>{lang === 'bn' ? 'বিস্তারিত হিস্যা' : 'Breakdown'}</span>
-          <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+          <span>{lang === 'bn' ? 'হিস্যা ও কিস্তি বিবরণী' : 'View Full Details'}</span>
+          <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </div>
     </div>

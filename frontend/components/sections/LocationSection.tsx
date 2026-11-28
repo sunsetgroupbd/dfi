@@ -12,8 +12,8 @@ export const LocationSection: React.FC = () => {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-24 bg-white border-b border-[#E5E7EB]">
-      <Container>
+    <section className="py-14 sm:py-20 bg-white border-b border-[#E5E7EB]">
+      <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Heading, Address & Commute Pills (5 cols) */}
           <FadeIn direction="right" duration={0.5} className="lg:col-span-5 space-y-6">

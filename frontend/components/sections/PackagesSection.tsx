@@ -35,15 +35,15 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
   };
 
   return (
-    <section id="packages-section" className="py-16 sm:py-24 bg-white border-b border-[#E5E7EB]">
-      <Container>
+    <section id="packages-section" className="py-14 sm:py-20 bg-white border-b border-[#E5E7EB]">
+      <Container size="wide">
         {/* Section Header with Right View All Link */}
-        <FadeIn direction="up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
+        <FadeIn direction="up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <span className="text-[11px] font-semibold uppercase tracking-normal text-[#6B7280]">
-              {lang === 'bn' ? 'আমাদের প্যাকেজসমূহ' : 'OUR PACKAGES'}
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1E7C46]">
+              {lang === 'bn' ? 'আমাদের প্যাকেজসমূহ' : 'FEATURED PACKAGES'}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-normal mt-1">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0D2F1D] tracking-tight mt-1">
               {lang === 'bn' ? 'আপনার পছন্দের অংশীদারিত্ব বেছে নিন' : 'Choose Your Share of Paradise'}
             </h2>
           </div>
@@ -54,22 +54,22 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
               className="text-xs font-semibold text-[#1E7C46] hover:underline cursor-pointer"
             >
               {showComparison
-                ? lang === 'bn' ? 'কার্ড দেখুন' : 'View Cards'
+                ? lang === 'bn' ? 'কার্ড ভিউ' : 'View Cards'
                 : lang === 'bn' ? 'তুলনা দেখুন' : 'Compare Table'}
             </button>
             <Link
               href="/packages"
-              className="inline-flex items-center gap-1 text-xs font-semibold text-[#1E7C46] hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E7C46] hover:text-[#166438] group"
             >
-              <span>{lang === 'bn' ? 'সকল প্যাকেজ' : 'View All Packages'}</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>{lang === 'bn' ? 'সকল প্যাকেজ' : 'View all'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
         </FadeIn>
 
-        {/* View Mode: Cards (2 in a row on mobile, 4 on desktop) or Comparison Table */}
+        {/* View Mode: Cards (4 across on desktop, 2 on tablet, 1 on mobile) or Comparison Table */}
         {!showComparison ? (
-          <StaggerContainer staggerDelay={0.08} className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5">
+          <StaggerContainer staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {t.packages.items.map((pkg) => (
               <StaggerItem key={pkg.id}>
                 <PackageCard
